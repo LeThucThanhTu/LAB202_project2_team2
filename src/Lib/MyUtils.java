@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Lib;
 
 /**
@@ -27,7 +22,7 @@ public class MyUtils {
         return true;
     }
 
-    //- min <= num <= max
+    // - min <= num <= max
     public static boolean isInRanged(double num, double min, double max) {
         return (min <= num && num <= max);
     }
