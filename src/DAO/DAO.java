@@ -17,7 +17,7 @@ public interface DAO<T> {
     void delete();
 
     void update();
-
+    void tuNgu();
     T search();
 
     void setList(ArrayList<T> aList);
