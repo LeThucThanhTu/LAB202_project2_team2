@@ -1,4 +1,4 @@
-package Model;
+package Model.DAO;
 
 /**
  *
@@ -6,7 +6,7 @@ package Model;
  */
 import java.util.ArrayList;
 
-public interface DAO<T> {
+public interface iDAO<T> {
     ArrayList<T> getList();
     
     ArrayList<T> readFromFile();
