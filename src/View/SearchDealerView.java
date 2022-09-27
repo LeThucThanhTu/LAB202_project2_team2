@@ -5,12 +5,10 @@
  */
 package View;
 
-import javax.swing.JFrame;
-
 /**
  *
  * @author this pc
  */
-public class DealerMngView extends JFrame{
+public class SearchDealerView {
     
 }
