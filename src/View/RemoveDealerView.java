@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package View;
 
 /**
  *
  * @author this pc
  */
-public class App {
-    public static void main(String[] args) {
-        
-    }
+public class RemoveDealerView {
+    
 }
