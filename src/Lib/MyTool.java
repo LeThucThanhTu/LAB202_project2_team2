@@ -34,21 +34,23 @@ public class MyTool {
 
     public static boolean validStr(String str, String regEX) {
         str = sc.nextLine();
-        if (str.matches(regEX)) {
+        if (str.matches(regEX)) 
+            
             return true;
 
-        } else {
+        else {
             return false;
 
         }
 
     }
+    
     //Check Valid Password
-
     public static boolean validPassword(String str, int minLen) {
-        if (str.length() < minLen) {
+        if (str.length() < minLen)             
             return false;
-        }
+        
+        
         return str.matches(".*[a-zA-Z]+.*")
                 && str.matches(".*[\\d]+.*")
                 && str.matches(".*[\\W]+.*"); //           
@@ -66,18 +68,19 @@ public class MyTool {
             System.out.println(e);
 
         }
+        
         return null;
     }
     // ParseBool
-
     public static boolean parseBool(String boolStr) {
         char c = boolStr.trim().toUpperCase().charAt(0);
+        
         return (c == '1' || c == 'Y' || c == 'T');
 
     }
     // Tools for Inputting Data
+    
     //ReadnonBlank
-
     public static String readNonBlank(String message) {
         String input = "";
         do {
@@ -85,6 +88,7 @@ public class MyTool {
             input = sc.nextLine().trim();
 
         } while (input.isEmpty());
+        
         return input;
 
     }
@@ -98,61 +102,59 @@ public class MyTool {
             valid = validStr(input, pattern);
 
         } while (!valid);
+        
         return input;
-
     }
 
     public static boolean readBool(String message) {
         String input;
-        System.out.println(message + "[1/0-Y/N-T/F]:");
+        System.out.println(message + "[1/0-Y/N-T/F]:");        
         input = sc.nextLine().trim();
-        if (input.isEmpty()) {
-            return false;
-        }
+        
+        if (input.isEmpty()) 
+            return false;        
+        
         char c = Character.toUpperCase(input.charAt(0));
+        
         return (c == '1' || c == 'Y' || c == 'T');
 
     }
 
     public static List<String> readLinesFromFile(String Filename) {
+        List<String> list = new ArrayList();
+
         try {
-            File f = new File(Filename);
-            if (!f.exists()) {
-                return null;
-            }
-            FileReader fr = new FileReader(f);
-            BufferedReader bf = new BufferedReader(fr);
-            String details, obj;
-            while ((details = bf.readLine()) != null) {// Splitting details into elements
-                StringTokenizer stk = new StringTokenizer(details, ",");
-                String code = stk.nextToken().toUpperCase();
-                String name = stk.nextToken().toUpperCase();
-                int salary = Integer.parseInt(stk.nextToken());
-                // Create an employee
 
-            }
-            bf.close();
-            fr.close();
-        } catch (Exception e) {
+            FileInputStream fileIn = new FileInputStream(Filename);
+            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
 
-            System.out.println(e);
-
+            Object obj = objectIn.readObject();
+            list.add((String)obj);
+            
+            System.out.println("The Object has been read from the file");                      
+            objectIn.close();
+            
+            return list;
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            
+            return null;           
         }
-
-        return readLinesFromFile(Filename);
 
     }
 
     public static void writeFile(String filename, List list) {
 
         try {
-
+            
             FileOutputStream fileOut = new FileOutputStream(filename);
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+            
             objectOut.writeObject(list);
             objectOut.close();
+            
             System.out.println("The Object  was succesfully written to a file");
-
+            
         } catch (Exception ex) {
             ex.printStackTrace();
         }
