@@ -11,14 +11,8 @@ import java.text.SimpleDateFormat;
 import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.text.ParseException;
-import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -30,31 +24,26 @@ import java.util.StringTokenizer;
 public class MyTool {
 
     public static final Scanner sc = new Scanner(System.in);
-    //Check Valid String  
 
+    // Check Valid String
     public static boolean validStr(String str, String regEX) {
         str = sc.nextLine();
-        if (str.matches(regEX)) {
+        if (str.matches(regEX))
             return true;
-
-        } else {
+        else
             return false;
-
-        }
-
     }
-    //Check Valid Password
 
+    // Check Valid Password
     public static boolean validPassword(String str, int minLen) {
-        if (str.length() < minLen) {
+        if (str.length() < minLen)
             return false;
-        }
         return str.matches(".*[a-zA-Z]+.*")
                 && str.matches(".*[\\d]+.*")
-                && str.matches(".*[\\W]+.*"); //           
+                && str.matches(".*[\\W]+.*");
     }
 
-// Parse Date
+    // Parse Date
     public static Date parseDate(String dateStr, String dateFormat) {
         SimpleDateFormat dF = (SimpleDateFormat) SimpleDateFormat.getInstance();
         dF.applyPattern(dateFormat);
@@ -68,16 +57,16 @@ public class MyTool {
         }
         return null;
     }
-    // ParseBool
 
+    // ParseBool
     public static boolean parseBool(String boolStr) {
         char c = boolStr.trim().toUpperCase().charAt(0);
         return (c == '1' || c == 'Y' || c == 'T');
 
     }
-    // Tools for Inputting Data
-    //ReadnonBlank
 
+    // Tools for Inputting Data
+    // ReadnonBlank
     public static String readNonBlank(String message) {
         String input = "";
         do {
@@ -117,9 +106,9 @@ public class MyTool {
     public static List<String> readLinesFromFile(String Filename) {
         try {
             File f = new File(Filename);
-            if (!f.exists()) {
+            if (!f.exists())
                 return null;
-            }
+
             FileReader fr = new FileReader(f);
             BufferedReader bf = new BufferedReader(fr);
             String details, obj;
@@ -144,14 +133,12 @@ public class MyTool {
     }
 
     public static void writeFile(String filename, List list) {
-
         try {
-
             FileOutputStream fileOut = new FileOutputStream(filename);
             ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
             objectOut.writeObject(list);
             objectOut.close();
-            System.out.println("The Object  was succesfully written to a file");
+            System.out.println("The Object  was successfully written to a file");
 
         } catch (Exception ex) {
             ex.printStackTrace();
