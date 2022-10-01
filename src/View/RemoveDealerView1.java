@@ -9,12 +9,12 @@ package View;
  *
  * @author letu
  */
-public class SearchDealerView extends javax.swing.JFrame {
+public class RemoveDealerView1 extends javax.swing.JFrame {
 
     /**
      * Creates new form RemoveDealerView
      */
-    public SearchDealerView() {
+    public RemoveDealerView1() {
         initComponents();
     }
 
@@ -34,7 +34,7 @@ public class SearchDealerView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         title.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        title.setText("Remove Dealer");
+        title.setText("Search Dealer");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Dealer's ID");
@@ -51,7 +51,7 @@ public class SearchDealerView extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addComponent(idSearchField))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(182, Short.MAX_VALUE)
+                        .addContainerGap(209, Short.MAX_VALUE)
                         .addComponent(title)))
                 .addGap(159, 159, 159))
         );
@@ -87,13 +87,13 @@ public class SearchDealerView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SearchDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveDealerView1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SearchDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveDealerView1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SearchDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveDealerView1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SearchDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveDealerView1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -101,7 +101,7 @@ public class SearchDealerView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SearchDealerView().setVisible(true);
+                new RemoveDealerView1().setVisible(true);
             }
         });
     }
