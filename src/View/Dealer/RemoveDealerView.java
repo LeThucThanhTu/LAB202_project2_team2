@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package View.Dealer;
 
 /**
  *
  * @author letu
  */
-public class SearchDeliveryView extends javax.swing.JFrame {
+public class RemoveDealerView extends javax.swing.JFrame {
 
     /**
      * Creates new form RemoveDealerView
      */
-    public SearchDeliveryView() {
+    public RemoveDealerView() {
         initComponents();
     }
 
@@ -34,10 +34,10 @@ public class SearchDeliveryView extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         title.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        title.setText("Remove Dealer");
+        title.setText("Search Dealer");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Delivery's ID");
+        jLabel1.setText("Dealer's ID");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,7 +51,7 @@ public class SearchDeliveryView extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addComponent(idSearchField))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(182, Short.MAX_VALUE)
+                        .addContainerGap(209, Short.MAX_VALUE)
                         .addComponent(title)))
                 .addGap(159, 159, 159))
         );
@@ -87,13 +87,13 @@ public class SearchDeliveryView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SearchDeliveryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SearchDeliveryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SearchDeliveryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SearchDeliveryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -103,7 +103,7 @@ public class SearchDeliveryView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SearchDeliveryView().setVisible(true);
+                new RemoveDealerView().setVisible(true);
             }
         });
     }
