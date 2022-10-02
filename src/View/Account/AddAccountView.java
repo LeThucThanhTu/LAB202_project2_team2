@@ -1,25 +1,24 @@
-package View.Dealer;
 
-public class AddDealerView extends javax.swing.JFrame {
+package View.Account;
 
-    public AddDealerView() {
+public class AddAccountView extends javax.swing.JFrame {
+
+    public AddAccountView() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        addressField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        nameField = new javax.swing.JTextField();
-        idField = new javax.swing.JTextField();
+        pwdField = new javax.swing.JTextField();
+        usrField = new javax.swing.JTextField();
         addButton = new javax.swing.JButton();
-        phoneField = new javax.swing.JTextField();
+        roleField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -32,18 +31,6 @@ public class AddDealerView extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        addressField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        addressField.setForeground(new java.awt.Color(204, 204, 204));
-        addressField.setText("Address");
-        addressField.setBorder(null);
-        addressField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addressFieldActionPerformed(evt);
-            }
-        });
-        jPanel2.add(addressField);
-        addressField.setBounds(140, 540, 530, 70);
-
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\bg.png")); // NOI18N
         jPanel2.add(jLabel1);
         jLabel1.setBounds(760, -30, 420, 810);
@@ -54,49 +41,45 @@ public class AddDealerView extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel3.setText("Add New Dealer");
+        jLabel3.setText("Add New Account");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(220, 60, 370, 50);
+        jLabel3.setBounds(200, 110, 410, 50);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\textFrame.png")); // NOI18N
-        jPanel2.add(jLabel4);
-        jLabel4.setBounds(120, 530, 570, 90);
+        pwdField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        pwdField.setForeground(new java.awt.Color(204, 204, 204));
+        pwdField.setText("Password");
+        pwdField.setBorder(null);
+        jPanel2.add(pwdField);
+        pwdField.setBounds(140, 340, 530, 70);
 
-        nameField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        nameField.setForeground(new java.awt.Color(204, 204, 204));
-        nameField.setText("Name");
-        nameField.setBorder(null);
-        jPanel2.add(nameField);
-        nameField.setBounds(140, 290, 530, 70);
-
-        idField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        idField.setForeground(new java.awt.Color(204, 204, 204));
-        idField.setText("ID");
-        idField.setBorder(null);
-        jPanel2.add(idField);
-        idField.setBounds(150, 170, 520, 60);
+        usrField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        usrField.setForeground(new java.awt.Color(204, 204, 204));
+        usrField.setText("user");
+        usrField.setBorder(null);
+        jPanel2.add(usrField);
+        usrField.setBounds(150, 220, 520, 60);
 
         addButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         addButton.setForeground(new java.awt.Color(153, 153, 153));
-        addButton.setText("Add Dealer");
+        addButton.setText("Add Account");
         jPanel2.add(addButton);
         addButton.setBounds(430, 675, 250, 50);
 
-        phoneField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        phoneField.setForeground(new java.awt.Color(204, 204, 204));
-        phoneField.setText("Phone");
-        phoneField.setBorder(null);
-        phoneField.addActionListener(new java.awt.event.ActionListener() {
+        roleField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        roleField.setForeground(new java.awt.Color(204, 204, 204));
+        roleField.setText("Role");
+        roleField.setBorder(null);
+        roleField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                phoneFieldActionPerformed(evt);
+                roleFieldActionPerformed(evt);
             }
         });
-        jPanel2.add(phoneField);
-        phoneField.setBounds(140, 412, 530, 70);
+        jPanel2.add(roleField);
+        roleField.setBounds(140, 460, 530, 70);
 
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\textFrame.png")); // NOI18N
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(120, 160, 570, 90);
+        jLabel5.setBounds(120, 210, 570, 90);
 
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setForeground(new java.awt.Color(153, 153, 153));
@@ -106,11 +89,11 @@ public class AddDealerView extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\textFrame.png")); // NOI18N
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(120, 280, 570, 90);
+        jLabel6.setBounds(120, 330, 570, 90);
 
         jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\textFrame.png")); // NOI18N
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(120, 400, 570, 90);
+        jLabel7.setBounds(120, 450, 570, 90);
 
         jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\Rectangle 3.png")); // NOI18N
         jPanel2.add(jLabel8);
@@ -138,30 +121,24 @@ public class AddDealerView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void phoneFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_phoneFieldActionPerformed
+    private void roleFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_phoneFieldActionPerformed
-
-    private void addressFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addressFieldActionPerformed
+    }//GEN-LAST:event_roleFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
-    private javax.swing.JTextField addressField;
     private javax.swing.JButton backButton;
-    private javax.swing.JTextField idField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField nameField;
-    private javax.swing.JTextField phoneField;
+    private javax.swing.JTextField pwdField;
+    private javax.swing.JTextField roleField;
+    private javax.swing.JTextField usrField;
     // End of variables declaration//GEN-END:variables
 }
