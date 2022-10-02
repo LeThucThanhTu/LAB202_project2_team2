@@ -5,11 +5,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import Lib.MyTool;
+import Model.Entity.Config;
 import Model.Entity.Dealer;
 
 public class DealerDAO implements iDAO<Dealer> {
     private static DealerDAO instance;
     private ArrayList<Dealer> dealList;
+    private String fn = new Config().getDealerFile();
 
     private DealerDAO() {
         dealList = readFromFile();
@@ -47,7 +49,6 @@ public class DealerDAO implements iDAO<Dealer> {
 
     @Override
     public ArrayList<Dealer> readFromFile() {
-        String fn = "????";
         ArrayList<Dealer> ls = new ArrayList<>();
         ls.addAll((ArrayList<Dealer>) MyTool.readFile(fn));
         return ls;
@@ -101,7 +102,6 @@ public class DealerDAO implements iDAO<Dealer> {
 
     @Override
     public void writeToFile() {
-        String fn = "???";
         MyTool.writeFile(fn, dealList);
     }
 

@@ -6,10 +6,12 @@ import java.util.Iterator;
 
 import Lib.MyTool;
 import Model.Entity.Account;
+import Model.Entity.Config;
 
 public class AccountDAO implements iDAO<Account> {
     private static AccountDAO instance;
     private ArrayList<Account> accList;
+    private String fn = new Config().getAccountFile();
 
     private AccountDAO() {
         accList = readFromFile();
@@ -47,7 +49,6 @@ public class AccountDAO implements iDAO<Account> {
 
     @Override
     public ArrayList<Account> readFromFile() {
-        String fn = "????";
         ArrayList<Account> ls = new ArrayList<>();
         ls.addAll((ArrayList<Account>) MyTool.readFile(fn));
         return ls;
@@ -59,7 +60,7 @@ public class AccountDAO implements iDAO<Account> {
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();
-            if (object.toString().equals(next.getaccName().toString())) {
+            if (object.toString().equals(next.toString())) {
                 return true;
             }
         }
@@ -87,7 +88,7 @@ public class AccountDAO implements iDAO<Account> {
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();
-            if (object.toString().equals(next.getaccName().toString())) {
+            if (object.toString().equals(next.toString())) {
                 accList.remove(next);
                 System.out.println("-----DETELED-----");
                 return;
@@ -101,7 +102,6 @@ public class AccountDAO implements iDAO<Account> {
 
     @Override
     public void writeToFile() {
-        String fn = "???";
         MyTool.writeFile(fn, accList);
     }
 
