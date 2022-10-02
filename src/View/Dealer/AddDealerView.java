@@ -1,4 +1,4 @@
-package View;
+package View.Dealer;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
