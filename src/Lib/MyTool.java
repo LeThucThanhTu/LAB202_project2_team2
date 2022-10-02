@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -125,40 +126,58 @@ public class MyTool {
 
         try {
 
-            FileInputStream fileIn = new FileInputStream(Filename);
-            ObjectInputStream objectIn = new ObjectInputStream(fileIn);
-
-            Object obj = objectIn.readObject();
-            list.add((String)obj);
+          File f = new File(Filename);
+          if(!f.exists())
+              return null;
+          
+          FileReader fr = new FileReader(f);
+          BufferedReader bf = new BufferedReader(fr);
+          String details;
+          while ((details = bf.readLine()) != null)
+          {
+              StringTokenizer stk= new StringTokenizer(details,",");
+              
+              list.add(details);
+          }
             
-            System.out.println("The Object has been read from the file");                      
-            objectIn.close();
-            
-            return list;
+          
         } catch (Exception ex) {
             ex.printStackTrace();
             
-            return null;           
+                      
         }
-
+        return list;
     }
 
     public static void writeFile(String filename, List list) {
-
-        try {
-            
-            FileOutputStream fileOut = new FileOutputStream(filename);
-            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            
-            objectOut.writeObject(list);
-            objectOut.close();
-            
-            System.out.println("The Object  was succesfully written to a file");
-            
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        try{
+        FileWriter fw = new FileWriter(filename);
+        BufferedWriter bw = new BufferedWriter(fw);
+        
+        for ( int i = 0; i< list.size();i++)
+        {
+         
+        bw.write(list.get(i).toString());
+        bw.newLine();
+        
+        }
+         bw.close();
+            fw.close();
+        }catch(Exception e)
+        {
+            System.out.println(e);
+        
         }
 
-    }
+
+
+
+
+
+
+
+}
+
+    
 
 }
