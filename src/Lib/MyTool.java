@@ -9,13 +9,19 @@ import java.util.Scanner;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.ObjectInputStream;
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.text.ParseException;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+
+import Model.AccountChecker;
+import Model.Entity.Account;
 
 /**
  * 
@@ -144,4 +150,22 @@ public class MyTool {
         }
     }
 
+    public static ArrayList readFile(String fn) {
+        int i;
+        ArrayList list1 = new ArrayList<>();
+        try {
+            FileInputStream fileP = new FileInputStream(fn);
+            // check whether file is empty or not at first time
+            while ((i = fileP.available()) > 0) {
+                // System.out.println(i+" Available bytes in file!");
+                ObjectInputStream fileS = new ObjectInputStream(fileP);
+                list1.addAll((ArrayList<Account>) fileS.readObject());// different list because reassign new address
+                System.out.println("--------------Read file---------------");
+            }
+        } catch (Exception e) {
+            System.out.println("ERROR READFILE");
+            e.printStackTrace();
+        }
+        return list1;
+    }
 }
