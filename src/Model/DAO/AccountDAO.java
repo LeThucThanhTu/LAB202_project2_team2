@@ -32,7 +32,7 @@ public class AccountDAO implements iDAO<Account> {
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();
-            if (input.equals(next.getaccName())) {
+            if (input.equals(next.getAccName())) {
                 return next;
             }
         }
