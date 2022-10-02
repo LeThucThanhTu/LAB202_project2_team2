@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View.Delivery;
+package View.Account;
 
 /**
  *
  * @author letu
  */
-public class DeliveryMngView extends javax.swing.JFrame {
+public class AccountMngView extends javax.swing.JFrame {
 
     /**
      * Creates new form DealerMngViewNew
      */
-    public DeliveryMngView() {
+    public AccountMngView() {
         initComponents();
     }
 
@@ -53,7 +53,7 @@ public class DeliveryMngView extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel1.setText("Delivery's Menu");
+        jLabel1.setText("Account's Menu");
         frame.add(jLabel1);
         jLabel1.setBounds(660, 40, 270, 47);
 
@@ -66,7 +66,7 @@ public class DeliveryMngView extends javax.swing.JFrame {
         jLabel2.setBounds(90, 0, 355, 730);
 
         printAllButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        printAllButton.setText("Print All Delivery");
+        printAllButton.setText("Print All Account");
         frame.add(printAllButton);
         printAllButton.setBounds(860, 145, 250, 50);
 
@@ -75,17 +75,17 @@ public class DeliveryMngView extends javax.swing.JFrame {
         jLabel4.setBounds(850, 140, 260, 70);
 
         searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        searchButton.setText("Search Delivery");
+        searchButton.setText("Search Account");
         frame.add(searchButton);
         searchButton.setBounds(860, 250, 250, 60);
 
         deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        deleteButton.setText("Remove Delivery");
+        deleteButton.setText("Remove a Account");
         frame.add(deleteButton);
         deleteButton.setBounds(460, 250, 250, 60);
 
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jButton1.setText("Add new Delivery");
+        jButton1.setText("Add new Account");
         jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +100,7 @@ public class DeliveryMngView extends javax.swing.JFrame {
         jLabel5.setBounds(850, 250, 260, 70);
 
         updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        updateButton.setText("Update Delivery");
+        updateButton.setText("Update Account");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateButtonActionPerformed(evt);
@@ -178,18 +178,14 @@ public class DeliveryMngView extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DeliveryMngView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AccountMngView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DeliveryMngView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AccountMngView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DeliveryMngView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AccountMngView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DeliveryMngView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AccountMngView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -198,7 +194,7 @@ public class DeliveryMngView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeliveryMngView().setVisible(true);
+                new AccountMngView().setVisible(true);
             }
         });
     }
