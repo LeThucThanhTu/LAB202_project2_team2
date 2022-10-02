@@ -30,6 +30,7 @@ public class AccountMngView extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         frame.setBackground(new java.awt.Color(255, 255, 255));
         frame.setLayout(null);
