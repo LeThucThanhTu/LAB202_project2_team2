@@ -21,7 +21,7 @@ public class DealerMngView extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         printContButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        printUnCintButton = new javax.swing.JButton();
+        printUnContButton = new javax.swing.JButton();
         updateButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -44,11 +44,11 @@ public class DealerMngView extends javax.swing.JFrame {
         frame.add(jLabel1);
         jLabel1.setBounds(700, 40, 227, 47);
 
-        title.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\logo.png")); // NOI18N
+        title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
         frame.add(title);
         title.setBounds(30, 220, 205, 234);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\bg.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg.png"))); // NOI18N
         frame.add(jLabel2);
         jLabel2.setBounds(90, 0, 355, 730);
 
@@ -91,10 +91,10 @@ public class DealerMngView extends javax.swing.JFrame {
         frame.add(jLabel5);
         jLabel5.setBounds(450, 470, 260, 70);
 
-        printUnCintButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        printUnCintButton.setText("UN-cont Dealer List");
-        frame.add(printUnCintButton);
-        printUnCintButton.setBounds(860, 370, 250, 50);
+        printUnContButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        printUnContButton.setText("UN-cont Dealer List");
+        frame.add(printUnContButton);
+        printUnContButton.setBounds(860, 370, 250, 50);
 
         updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         updateButton.setText("Update Dealer");
@@ -175,7 +175,7 @@ public class DealerMngView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton printAllButton;
     private javax.swing.JButton printContButton;
-    private javax.swing.JButton printUnCintButton;
+    private javax.swing.JButton printUnContButton;
     private javax.swing.JButton saveButton;
     private javax.swing.JButton searchButton;
     private javax.swing.JLabel title;

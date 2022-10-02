@@ -44,15 +44,15 @@ public class LogInView extends javax.swing.JFrame {
         frame.add(pwdField);
         pwdField.setBounds(390, 300, 530, 60);
 
-        usrFrame.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\Rectangle 1.png")); // NOI18N
+        usrFrame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         frame.add(usrFrame);
         usrFrame.setBounds(370, 160, 562, 85);
 
-        pwdFrame.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\Rectangle 1.png")); // NOI18N
+        pwdFrame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         frame.add(pwdFrame);
         pwdFrame.setBounds(370, 290, 562, 85);
 
-        title.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\logo.png")); // NOI18N
+        title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
         frame.add(title);
         title.setBounds(90, 140, 250, 270);
 
@@ -71,7 +71,7 @@ public class LogInView extends javax.swing.JFrame {
         frame.add(forgotUsrButton);
         forgotUsrButton.setBounds(370, 250, 109, 25);
 
-        button.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\Group 2.png")); // NOI18N
+        button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logIn_noClick.png"))); // NOI18N
         button.setBorder(null);
         button.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
