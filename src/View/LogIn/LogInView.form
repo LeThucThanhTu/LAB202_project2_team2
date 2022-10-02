@@ -88,7 +88,7 @@
         <Component class="javax.swing.JLabel" name="usrFrame">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\lethu\OneDrive\Desktop\Code_Java\LAB202_project2_team2\src\View\icon\Rectangle 1.png"/>
+              <Image iconType="3" name="/View/icon/textFrame.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -100,7 +100,7 @@
         <Component class="javax.swing.JLabel" name="pwdFrame">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\lethu\OneDrive\Desktop\Code_Java\LAB202_project2_team2\src\View\icon\Rectangle 1.png"/>
+              <Image iconType="3" name="/View/icon/textFrame.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -112,7 +112,7 @@
         <Component class="javax.swing.JLabel" name="title">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\lethu\OneDrive\Desktop\Code_Java\LAB202_project2_team2\src\View\icon\logo.png"/>
+              <Image iconType="3" name="/View/icon/logo.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -166,7 +166,7 @@
         <Component class="javax.swing.JButton" name="button">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\lethu\OneDrive\Desktop\Code_Java\LAB202_project2_team2\src\View\icon\Group 2.png"/>
+              <Image iconType="3" name="/View/icon/logIn_noClick.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

@@ -40,7 +40,7 @@ public class AccountMngView extends javax.swing.JFrame {
         frame.add(jLabel1);
         jLabel1.setBounds(660, 40, 270, 47);
 
-        title.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\logo.png")); // NOI18N
+        title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
         frame.add(title);
         title.setBounds(30, 220, 205, 234);
 
