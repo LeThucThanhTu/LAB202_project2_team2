@@ -36,10 +36,10 @@ public class MyTool {
         str = sc.nextLine();
         if (str.matches(regEX)) 
             
-            return true;
+            return false;
 
         else {
-            return false;
+            return true;
 
         }
 
