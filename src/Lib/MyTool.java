@@ -29,7 +29,7 @@ import java.util.StringTokenizer;
  * @author phatt
  */
 public class MyTool {
-
+    String ID,name,add,phone,continuing;
     public static final Scanner sc = new Scanner(System.in);
     //Check Valid String  
 
@@ -135,7 +135,7 @@ public class MyTool {
           String details;
           while ((details = bf.readLine()) != null)
           {
-              StringTokenizer stk= new StringTokenizer(details,",");
+              
               
               list.add(details);
           }
@@ -150,19 +150,22 @@ public class MyTool {
     }
 
     public static void writeFile(String filename, List list) {
+        
+        
         try{
         FileWriter fw = new FileWriter(filename);
-        BufferedWriter bw = new BufferedWriter(fw);
+       PrintWriter pw = new PrintWriter(fw);
         
+       
         for ( int i = 0; i< list.size();i++)
         {
          
-        bw.write(list.get(i).toString());
-        bw.newLine();
+        pw.println(list.get(i));
+       
         
         }
-         bw.close();
-            fw.close();
+         pw.close();
+         fw.close();
         }catch(Exception e)
         {
             System.out.println(e);
