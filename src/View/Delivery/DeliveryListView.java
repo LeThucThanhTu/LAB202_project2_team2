@@ -1,8 +1,8 @@
-package View.Dealer;
+package View.Delivery;
 
-public class DealerListView extends javax.swing.JFrame {
+public class DeliveryListView extends javax.swing.JFrame {
 
-    public DealerListView() {
+    public DeliveryListView() {
         initComponents();
     }
     
@@ -26,17 +26,15 @@ public class DealerListView extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
         backButton.setText("Back");
         jPanel2.add(backButton);
-        backButton.setBounds(430, 625, 250, 60);
+        backButton.setBounds(449, 620, 250, 50);
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel3.setText("Dealer List");
+        jLabel3.setText("Delivery List");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(730, 30, 250, 50);
+        jLabel3.setBounds(690, 50, 290, 50);
         jPanel2.add(jLabel8);
         jLabel8.setBounds(420, 670, 270, 0);
         jPanel2.add(jLabel9);
@@ -88,15 +86,15 @@ public class DealerListView extends javax.swing.JFrame {
         }
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(30, 110, 1040, 480);
+        jScrollPane1.setBounds(40, 130, 1010, 440);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(-470, -140, 990, 580);
+        jLabel1.setBounds(-460, -50, 990, 580);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(420, 620, 260, 80);
+        jLabel4.setBounds(440, 610, 260, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

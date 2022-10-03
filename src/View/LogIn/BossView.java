@@ -41,7 +41,7 @@ public class BossView extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -55,65 +55,65 @@ public class BossView extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
         jLabel4.setText("Boss's Menu");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(360, 60, 290, 60);
+        jLabel4.setBounds(410, 90, 290, 60);
 
         accountButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         accountButton.setForeground(new java.awt.Color(153, 153, 153));
         accountButton.setText("Account");
         jPanel1.add(accountButton);
-        accountButton.setBounds(350, 190, 250, 50);
+        accountButton.setBounds(430, 250, 250, 50);
 
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setForeground(new java.awt.Color(153, 153, 153));
         backButton.setText("Back");
         jPanel1.add(backButton);
-        backButton.setBounds(40, 490, 250, 50);
+        backButton.setBounds(430, 570, 250, 50);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(30, 480, 260, 70);
+        jLabel5.setBounds(420, 560, 260, 70);
 
         DeliveryButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         DeliveryButton.setForeground(new java.awt.Color(153, 153, 153));
         DeliveryButton.setText("Delivery");
         jPanel1.add(DeliveryButton);
-        DeliveryButton.setBounds(350, 390, 250, 50);
+        DeliveryButton.setBounds(430, 450, 250, 50);
 
         dealerButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         dealerButton.setForeground(new java.awt.Color(153, 153, 153));
         dealerButton.setText("Dealer");
         jPanel1.add(dealerButton);
-        dealerButton.setBounds(350, 290, 250, 50);
+        dealerButton.setBounds(430, 350, 250, 50);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(340, 180, 260, 70);
+        jLabel6.setBounds(420, 240, 260, 70);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(-360, -320, 1050, 790);
+        jLabel2.setBounds(-280, -310, 1050, 790);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(570, -20, 740, 660);
+        jLabel1.setBounds(730, -20, 740, 730);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(340, 280, 260, 70);
+        jLabel7.setBounds(420, 340, 260, 70);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(340, 380, 260, 70);
+        jLabel8.setBounds(420, 440, 260, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1110, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 592, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 714, Short.MAX_VALUE)
         );
 
         pack();

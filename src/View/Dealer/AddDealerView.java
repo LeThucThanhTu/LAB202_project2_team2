@@ -27,7 +27,7 @@ public class AddDealerView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -43,45 +43,45 @@ public class AddDealerView extends javax.swing.JFrame {
             }
         });
         jPanel2.add(addressField);
-        addressField.setBounds(140, 540, 530, 70);
+        addressField.setBounds(70, 490, 530, 70);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(930, 490, 220, 280);
+        jLabel2.setBounds(860, 440, 220, 280);
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Add New Dealer");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(220, 60, 370, 50);
+        jLabel3.setBounds(130, 30, 370, 50);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(120, 530, 570, 90);
+        jLabel4.setBounds(50, 480, 570, 90);
 
         nameField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         nameField.setForeground(new java.awt.Color(204, 204, 204));
         nameField.setText("Name");
         nameField.setBorder(null);
         jPanel2.add(nameField);
-        nameField.setBounds(140, 290, 530, 70);
+        nameField.setBounds(70, 240, 530, 70);
 
         idField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         idField.setForeground(new java.awt.Color(204, 204, 204));
         idField.setText("ID");
         idField.setBorder(null);
         jPanel2.add(idField);
-        idField.setBounds(150, 170, 520, 60);
+        idField.setBounds(80, 120, 520, 60);
 
         addButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         addButton.setForeground(new java.awt.Color(153, 153, 153));
         addButton.setText("Add Dealer");
         jPanel2.add(addButton);
-        addButton.setBounds(430, 675, 250, 50);
+        addButton.setBounds(360, 630, 250, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg.png"))); // NOI18N
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(740, -30, 420, 810);
+        jLabel1.setBounds(670, -80, 420, 810);
 
         phoneField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         phoneField.setForeground(new java.awt.Color(204, 204, 204));
@@ -93,25 +93,25 @@ public class AddDealerView extends javax.swing.JFrame {
             }
         });
         jPanel2.add(phoneField);
-        phoneField.setBounds(140, 412, 530, 70);
+        phoneField.setBounds(70, 360, 530, 70);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(120, 160, 570, 90);
+        jLabel5.setBounds(50, 110, 570, 90);
 
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setForeground(new java.awt.Color(153, 153, 153));
         backButton.setText("Back");
         jPanel2.add(backButton);
-        backButton.setBounds(130, 675, 250, 50);
+        backButton.setBounds(60, 630, 250, 50);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(120, 280, 570, 90);
+        jLabel6.setBounds(50, 230, 570, 90);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(120, 400, 570, 90);
+        jLabel7.setBounds(50, 350, 570, 90);
         jPanel2.add(jLabel8);
         jLabel8.setBounds(420, 670, 270, 0);
         jPanel2.add(jLabel9);
@@ -121,11 +121,11 @@ public class AddDealerView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1157, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1110, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 714, Short.MAX_VALUE)
         );
 
         pack();
