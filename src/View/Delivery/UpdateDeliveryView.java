@@ -26,9 +26,11 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         deleteButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
+        searchButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -117,14 +119,35 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
         deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         deleteButton.setForeground(new java.awt.Color(153, 153, 153));
         deleteButton.setText("Update");
+        deleteButton.setBorder(null);
+        deleteButton.setBorderPainted(false);
+        deleteButton.setContentAreaFilled(false);
+        deleteButton.setFocusPainted(false);
+        deleteButton.setFocusable(false);
         jPanel1.add(deleteButton);
         deleteButton.setBounds(610, 610, 250, 50);
 
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setForeground(new java.awt.Color(153, 153, 153));
         backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
         jPanel1.add(backButton);
         backButton.setBounds(320, 610, 250, 50);
+
+        searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(153, 153, 153));
+        searchButton.setText("Search");
+        searchButton.setBorder(null);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setFocusPainted(false);
+        searchButton.setFocusable(false);
+        jPanel1.add(searchButton);
+        searchButton.setBounds(600, 270, 250, 50);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel10);
@@ -137,6 +160,10 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel14);
         jLabel14.setBounds(600, 610, 270, 60);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(590, 270, 270, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -166,6 +193,7 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -178,5 +206,6 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nameField;
     private javax.swing.JTextField phoneField;
+    private javax.swing.JButton searchButton;
     // End of variables declaration//GEN-END:variables
 }

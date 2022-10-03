@@ -18,13 +18,15 @@ public class AddDeliveryView extends javax.swing.JFrame {
         usrField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         addButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
         roleField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -63,8 +65,24 @@ public class AddDeliveryView extends javax.swing.JFrame {
         addButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         addButton.setForeground(new java.awt.Color(153, 153, 153));
         addButton.setText("Add Delivery");
+        addButton.setBorder(null);
+        addButton.setBorderPainted(false);
+        addButton.setContentAreaFilled(false);
+        addButton.setFocusPainted(false);
+        addButton.setFocusable(false);
         jPanel2.add(addButton);
         addButton.setBounds(370, 630, 250, 50);
+
+        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        backButton.setForeground(new java.awt.Color(153, 153, 153));
+        backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
+        jPanel2.add(backButton);
+        backButton.setBounds(70, 630, 250, 50);
 
         roleField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         roleField.setForeground(new java.awt.Color(204, 204, 204));
@@ -82,12 +100,6 @@ public class AddDeliveryView extends javax.swing.JFrame {
         jPanel2.add(jLabel5);
         jLabel5.setBounds(60, 160, 570, 90);
 
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
-        backButton.setText("Back");
-        jPanel2.add(backButton);
-        backButton.setBounds(70, 630, 250, 50);
-
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel6);
         jLabel6.setBounds(60, 280, 570, 90);
@@ -99,6 +111,14 @@ public class AddDeliveryView extends javax.swing.JFrame {
         jLabel8.setBounds(420, 670, 270, 0);
         jPanel2.add(jLabel9);
         jLabel9.setBounds(120, 670, 270, 0);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(360, 630, 260, 60);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel2.add(jLabel10);
+        jLabel10.setBounds(70, 630, 260, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,8 +142,10 @@ public class AddDeliveryView extends javax.swing.JFrame {
     private javax.swing.JButton addButton;
     private javax.swing.JButton backButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

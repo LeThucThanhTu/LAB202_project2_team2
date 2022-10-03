@@ -29,6 +29,7 @@ public class SearchAccountView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         searchButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         nameField = new javax.swing.JTextField();
         phoneField = new javax.swing.JTextField();
@@ -43,7 +44,6 @@ public class SearchAccountView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
@@ -56,6 +56,11 @@ public class SearchAccountView extends javax.swing.JFrame {
         searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         searchButton.setForeground(new java.awt.Color(153, 153, 153));
         searchButton.setText("Search");
+        searchButton.setBorder(null);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setFocusPainted(false);
+        searchButton.setFocusable(false);
         searchButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchButtonActionPerformed(evt);
@@ -63,6 +68,17 @@ public class SearchAccountView extends javax.swing.JFrame {
         });
         jPanel1.add(searchButton);
         searchButton.setBounds(590, 610, 250, 50);
+
+        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        backButton.setForeground(new java.awt.Color(153, 153, 153));
+        backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
+        jPanel1.add(backButton);
+        backButton.setBounds(270, 610, 250, 50);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel14);
@@ -151,12 +167,6 @@ public class SearchAccountView extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel1.add(jLabel5);
         jLabel5.setBounds(-340, -290, 1010, 770);
-
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
-        backButton.setText("Back");
-        jPanel1.add(backButton);
-        backButton.setBounds(270, 610, 250, 50);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel10);

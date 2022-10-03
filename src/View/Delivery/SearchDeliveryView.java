@@ -42,9 +42,9 @@ public class SearchDeliveryView extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
+        searchButtton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        searchButtton = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -140,8 +140,24 @@ public class SearchDeliveryView extends javax.swing.JFrame {
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setForeground(new java.awt.Color(153, 153, 153));
         backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
         jPanel1.add(backButton);
         backButton.setBounds(290, 610, 250, 50);
+
+        searchButtton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        searchButtton.setForeground(new java.awt.Color(153, 153, 153));
+        searchButtton.setText("Search");
+        searchButtton.setBorder(null);
+        searchButtton.setBorderPainted(false);
+        searchButtton.setContentAreaFilled(false);
+        searchButtton.setFocusPainted(false);
+        searchButtton.setFocusable(false);
+        jPanel1.add(searchButtton);
+        searchButtton.setBounds(620, 610, 250, 50);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel10);
@@ -150,12 +166,6 @@ public class SearchDeliveryView extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel13);
         jLabel13.setBounds(280, 610, 270, 60);
-
-        searchButtton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        searchButtton.setForeground(new java.awt.Color(153, 153, 153));
-        searchButtton.setText("Search");
-        jPanel1.add(searchButtton);
-        searchButtton.setBounds(620, 610, 250, 50);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel14);

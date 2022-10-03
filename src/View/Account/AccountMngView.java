@@ -14,16 +14,16 @@ public class AccountMngView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         title = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        printAllButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         searchButton = new javax.swing.JButton();
+        printAllButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         updateButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         saveButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -48,28 +48,43 @@ public class AccountMngView extends javax.swing.JFrame {
         frame.add(jLabel2);
         jLabel2.setBounds(90, 0, 355, 730);
 
-        printAllButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        printAllButton.setText("Print All Account");
-        frame.add(printAllButton);
-        printAllButton.setBounds(860, 145, 250, 50);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
-        frame.add(jLabel4);
-        jLabel4.setBounds(850, 140, 260, 70);
-
+        searchButton.setBackground(new java.awt.Color(255, 255, 255));
         searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         searchButton.setText("Search Account");
+        searchButton.setBorder(null);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setFocusable(false);
         frame.add(searchButton);
         searchButton.setBounds(860, 250, 250, 60);
 
+        printAllButton.setBackground(new java.awt.Color(255, 255, 255));
+        printAllButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        printAllButton.setText("Print All Account");
+        printAllButton.setBorder(null);
+        printAllButton.setBorderPainted(false);
+        printAllButton.setContentAreaFilled(false);
+        printAllButton.setFocusPainted(false);
+        printAllButton.setFocusable(false);
+        frame.add(printAllButton);
+        printAllButton.setBounds(860, 145, 250, 50);
+
+        deleteButton.setBackground(new java.awt.Color(255, 255, 255));
         deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         deleteButton.setText("Remove a Account");
+        deleteButton.setBorder(null);
+        deleteButton.setContentAreaFilled(false);
+        deleteButton.setFocusable(false);
         frame.add(deleteButton);
         deleteButton.setBounds(460, 250, 250, 60);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jButton1.setText("Add new Account");
-        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -78,12 +93,12 @@ public class AccountMngView extends javax.swing.JFrame {
         frame.add(jButton1);
         jButton1.setBounds(460, 140, 250, 60);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
-        frame.add(jLabel5);
-        jLabel5.setBounds(850, 250, 260, 70);
-
+        updateButton.setBackground(new java.awt.Color(255, 255, 255));
         updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         updateButton.setText("Update Account");
+        updateButton.setBorder(null);
+        updateButton.setContentAreaFilled(false);
+        updateButton.setFocusable(false);
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateButtonActionPerformed(evt);
@@ -94,31 +109,58 @@ public class AccountMngView extends javax.swing.JFrame {
 
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusable(false);
         frame.add(backButton);
         backButton.setBounds(670, 605, 250, 50);
+
+        saveButton.setBackground(new java.awt.Color(255, 255, 255));
+        saveButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        saveButton.setText("Save");
+        saveButton.setBorder(null);
+        saveButton.setContentAreaFilled(false);
+        saveButton.setFocusable(false);
+        frame.add(saveButton);
+        saveButton.setBounds(860, 360, 250, 50);
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jLabel4.setFocusable(false);
+        frame.add(jLabel4);
+        jLabel4.setBounds(850, 140, 260, 70);
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jLabel5.setFocusable(false);
+        frame.add(jLabel5);
+        jLabel5.setBounds(850, 250, 260, 70);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         frame.add(jLabel6);
         jLabel6.setBounds(660, 600, 260, 70);
 
-        saveButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        saveButton.setText("Save");
-        frame.add(saveButton);
-        saveButton.setBounds(860, 360, 250, 50);
-
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jLabel7.setFocusable(false);
         frame.add(jLabel7);
         jLabel7.setBounds(850, 350, 260, 70);
 
+        jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jLabel8.setFocusable(false);
         frame.add(jLabel8);
         jLabel8.setBounds(450, 360, 260, 70);
 
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jLabel9.setFocusable(false);
         frame.add(jLabel9);
         jLabel9.setBounds(450, 250, 260, 70);
 
+        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jLabel12.setFocusable(false);
         frame.add(jLabel12);
         jLabel12.setBounds(450, 140, 260, 70);
 

@@ -70,34 +70,41 @@ public class LogInView extends javax.swing.JFrame {
         frame.add(jLabel1);
         jLabel1.setBounds(640, 510, 0, 0);
 
+        forgotUsrButton.setBackground(new java.awt.Color(255, 255, 255));
         forgotUsrButton.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         forgotUsrButton.setForeground(new java.awt.Color(66, 133, 244));
         forgotUsrButton.setText("Forgot email?");
         forgotUsrButton.setBorder(null);
+        forgotUsrButton.setBorderPainted(false);
+        forgotUsrButton.setContentAreaFilled(false);
         forgotUsrButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         frame.add(forgotUsrButton);
-        forgotUsrButton.setBounds(370, 250, 130, 25);
+        forgotUsrButton.setBounds(370, 250, 120, 25);
 
         button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logIn_noClick.png"))); // NOI18N
         button.setBorder(null);
         frame.add(button);
         button.setBounds(810, 450, 123, 55);
 
+        forgotPwdButton.setBackground(new java.awt.Color(255, 255, 255));
         forgotPwdButton.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         forgotPwdButton.setForeground(new java.awt.Color(66, 133, 244));
         forgotPwdButton.setText("Forget Password?");
         forgotPwdButton.setBorder(null);
+        forgotPwdButton.setBorderPainted(false);
+        forgotPwdButton.setContentAreaFilled(false);
         forgotPwdButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         frame.add(forgotPwdButton);
-        forgotPwdButton.setBounds(370, 470, 170, 25);
+        forgotPwdButton.setBounds(370, 470, 160, 25);
 
         showBox.setBackground(new java.awt.Color(255, 255, 255));
         showBox.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         showBox.setForeground(new java.awt.Color(102, 102, 102));
-        showBox.setText("Show Passoword");
+        showBox.setText("Show Password");
+        showBox.setToolTipText("");
         showBox.setBorder(null);
         frame.add(showBox);
-        showBox.setBounds(370, 400, 159, 25);
+        showBox.setBounds(370, 400, 149, 25);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

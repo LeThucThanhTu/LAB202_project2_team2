@@ -54,10 +54,15 @@ public class DealerMngView extends javax.swing.JFrame {
         frame.add(jLabel2);
         jLabel2.setBounds(90, 0, 355, 730);
 
+        printAllButton.setBackground(new java.awt.Color(255, 255, 255));
         printAllButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         printAllButton.setText("Print All Dealer");
+        printAllButton.setBorderPainted(false);
+        printAllButton.setContentAreaFilled(false);
+        printAllButton.setFocusPainted(false);
+        printAllButton.setFocusable(false);
         frame.add(printAllButton);
-        printAllButton.setBounds(860, 145, 250, 50);
+        printAllButton.setBounds(860, 140, 250, 60);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         frame.add(jLabel4);
@@ -65,22 +70,43 @@ public class DealerMngView extends javax.swing.JFrame {
 
         searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         searchButton.setText("Search a Dealer");
+        searchButton.setBorder(null);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setFocusPainted(false);
+        searchButton.setFocusable(false);
         frame.add(searchButton);
         searchButton.setBounds(460, 470, 250, 60);
 
+        deleteButton.setBackground(new java.awt.Color(255, 255, 255));
         deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         deleteButton.setText("Remove a Dealer");
+        deleteButton.setBorder(null);
+        deleteButton.setBorderPainted(false);
+        deleteButton.setContentAreaFilled(false);
+        deleteButton.setFocusPainted(false);
+        deleteButton.setFocusable(false);
         frame.add(deleteButton);
         deleteButton.setBounds(460, 250, 250, 60);
 
+        addButton.setBackground(new java.awt.Color(255, 255, 255));
         addButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         addButton.setText("Add new Dealer");
-        addButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        addButton.setBorder(null);
+        addButton.setBorderPainted(false);
+        addButton.setContentAreaFilled(false);
+        addButton.setFocusPainted(false);
+        addButton.setFocusable(false);
         frame.add(addButton);
         addButton.setBounds(460, 140, 250, 60);
 
+        printContButton.setBackground(new java.awt.Color(255, 255, 255));
         printContButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         printContButton.setText("Cont Dealer List");
+        printContButton.setBorderPainted(false);
+        printContButton.setContentAreaFilled(false);
+        printContButton.setFocusPainted(false);
+        printContButton.setFocusable(false);
         frame.add(printContButton);
         printContButton.setBounds(860, 260, 250, 50);
 
@@ -88,18 +114,34 @@ public class DealerMngView extends javax.swing.JFrame {
         frame.add(jLabel5);
         jLabel5.setBounds(450, 470, 260, 70);
 
+        printUnContButton.setBackground(new java.awt.Color(255, 255, 255));
         printUnContButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         printUnContButton.setText("UN-cont Dealer List");
+        printUnContButton.setBorder(null);
+        printUnContButton.setBorderPainted(false);
+        printUnContButton.setContentAreaFilled(false);
+        printUnContButton.setFocusPainted(false);
+        printUnContButton.setFocusable(false);
         frame.add(printUnContButton);
         printUnContButton.setBounds(860, 370, 250, 50);
 
         updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         updateButton.setText("Update Dealer");
+        updateButton.setBorder(null);
+        updateButton.setBorderPainted(false);
+        updateButton.setContentAreaFilled(false);
+        updateButton.setFocusPainted(false);
+        updateButton.setFocusable(false);
         frame.add(updateButton);
         updateButton.setBounds(459, 365, 250, 50);
 
         saveButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         saveButton.setText("Save");
+        saveButton.setBorder(null);
+        saveButton.setBorderPainted(false);
+        saveButton.setContentAreaFilled(false);
+        saveButton.setFocusPainted(false);
+        saveButton.setFocusable(false);
         frame.add(saveButton);
         saveButton.setBounds(860, 475, 250, 50);
 

@@ -62,18 +62,33 @@ public class BossView extends javax.swing.JFrame {
         accountButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         accountButton.setForeground(new java.awt.Color(153, 153, 153));
         accountButton.setText("Account");
+        accountButton.setBorder(null);
+        accountButton.setBorderPainted(false);
+        accountButton.setContentAreaFilled(false);
+        accountButton.setFocusPainted(false);
+        accountButton.setFocusable(false);
         jPanel1.add(accountButton);
         accountButton.setBounds(430, 250, 250, 50);
 
         deliveryButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         deliveryButton.setForeground(new java.awt.Color(153, 153, 153));
         deliveryButton.setText("Delivery");
+        deliveryButton.setBorder(null);
+        deliveryButton.setBorderPainted(false);
+        deliveryButton.setContentAreaFilled(false);
+        deliveryButton.setFocusPainted(false);
+        deliveryButton.setFocusable(false);
         jPanel1.add(deliveryButton);
         deliveryButton.setBounds(430, 450, 250, 50);
 
         dealerButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         dealerButton.setForeground(new java.awt.Color(153, 153, 153));
         dealerButton.setText("Dealer");
+        dealerButton.setBorder(null);
+        dealerButton.setBorderPainted(false);
+        dealerButton.setContentAreaFilled(false);
+        dealerButton.setFocusPainted(false);
+        dealerButton.setFocusable(false);
         jPanel1.add(dealerButton);
         dealerButton.setBounds(430, 350, 250, 50);
 

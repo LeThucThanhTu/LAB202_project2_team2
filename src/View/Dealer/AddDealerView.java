@@ -24,10 +24,12 @@ public class AddDealerView extends javax.swing.JFrame {
         nameField = new javax.swing.JTextField();
         idField = new javax.swing.JTextField();
         addButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         phoneField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -59,7 +61,7 @@ public class AddDealerView extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Add New Dealer");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(130, 30, 520, 50);
+        jLabel3.setBounds(150, 30, 520, 50);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel4);
@@ -82,8 +84,32 @@ public class AddDealerView extends javax.swing.JFrame {
         addButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         addButton.setForeground(new java.awt.Color(153, 153, 153));
         addButton.setText("Add Dealer");
+        addButton.setBorder(null);
+        addButton.setBorderPainted(false);
+        addButton.setContentAreaFilled(false);
+        addButton.setFocusPainted(false);
+        addButton.setFocusable(false);
         jPanel2.add(addButton);
         addButton.setBounds(360, 630, 250, 50);
+
+        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        backButton.setForeground(new java.awt.Color(153, 153, 153));
+        backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
+        jPanel2.add(backButton);
+        backButton.setBounds(60, 630, 250, 50);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel2.add(jLabel10);
+        jLabel10.setBounds(50, 630, 270, 60);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel2.add(jLabel11);
+        jLabel11.setBounds(350, 630, 270, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg.png"))); // NOI18N
         jPanel2.add(jLabel1);
@@ -104,12 +130,6 @@ public class AddDealerView extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel5);
         jLabel5.setBounds(50, 110, 570, 90);
-
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
-        backButton.setText("Back");
-        jPanel2.add(backButton);
-        backButton.setBounds(60, 630, 250, 50);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel6);
@@ -185,6 +205,8 @@ public class AddDealerView extends javax.swing.JFrame {
     private javax.swing.JButton backButton;
     private javax.swing.JTextField idField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

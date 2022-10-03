@@ -87,7 +87,8 @@ public class DealerDAO implements iDAO<Dealer> {
 
     @Override
     public boolean add(Dealer object) {
-        if (isExist(object)) return false;
+        if (isExist(object))
+            return false;
         dealList.add(object);
         // Tools | Templates.
         return true;
@@ -95,7 +96,8 @@ public class DealerDAO implements iDAO<Dealer> {
 
     @Override
     public boolean delete(Dealer object) {
-        if (!isExist(object)) return false;
+        if (!isExist(object))
+            return false;
         // case1 type hardcode
         Iterator<Dealer> itr = dealList.iterator();
         while (itr.hasNext()) {
