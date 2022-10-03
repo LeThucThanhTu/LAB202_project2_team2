@@ -73,15 +73,11 @@ public class DealerMngController {
         dealerMngView.addDeleteButtonListener(new ActionListener() {
             Dealer d;
             String data = "";
-            boolean valid;
             
             @Override
             public void actionPerformed(ActionEvent ae) {
-                valid = true;
-           
                 // show Remove Dealer View
                 showRemoveDealerView();
-                
                 // add ActionListener for Search Button in Delete Dealer view
                 removeView.addSearchButtonListener(new ActionListener() {
                     @Override
@@ -91,13 +87,10 @@ public class DealerMngController {
                         else {
                             d = dealerDAO.search(data);
                             if (d == null) removeView.setNullTextField();
-                            else {
-                                removeView.setTextFieldValue(d);
-                            }
+                            else removeView.setTextFieldValue(d);
                         }
                     }
                 });
-                
                 // add ActionListener for Delete Button in Delete Dealer view
                 removeView.addDeleteButtonListener(new ActionListener() {
                     @Override
@@ -114,7 +107,6 @@ public class DealerMngController {
                         }
                     }
                 });
-                
                 //add Actionlistener for Back Button in Delete Dealer view
                 removeView.addBackButtonListener(new ActionListener() {
                     @Override
@@ -130,7 +122,6 @@ public class DealerMngController {
         dealerMngView.addSearchButtonListener(new ActionListener() {
             Dealer d;
             String data = "";
-            boolean valid;
             
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -165,11 +156,9 @@ public class DealerMngController {
         dealerMngView.addUpdateButtonListener(new ActionListener() {
             Dealer d;
             String data = "";
-            boolean valid;
             
             @Override
             public void actionPerformed(ActionEvent ae) {
-                valid = true;
            
                 // show Update Dealer View
                 showUpdateDealerView();
@@ -255,6 +244,10 @@ public class DealerMngController {
     
     public void showDealerMngView() {
         dealerMngView.setVisible(true);
+    }
+    
+    public void exitByDispose() {
+        dealerMngView.setDefaultCloseOperation(dealerMngView.DISPOSE_ON_CLOSE);
     }
     
 //    Inner functions

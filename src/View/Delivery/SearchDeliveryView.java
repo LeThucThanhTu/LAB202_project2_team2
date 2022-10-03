@@ -15,7 +15,9 @@ public class SearchDeliveryView extends javax.swing.JFrame {
      * Creates new form SearchDealerViewNew
      */
     public SearchDeliveryView() {
+        super("Search Delivery");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

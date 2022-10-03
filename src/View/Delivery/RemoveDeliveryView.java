@@ -3,7 +3,9 @@ package View.Delivery;
 public class RemoveDeliveryView extends javax.swing.JFrame {
 
     public RemoveDeliveryView() {
+        super("Remove Delivery");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

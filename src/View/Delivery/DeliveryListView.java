@@ -3,7 +3,9 @@ package View.Delivery;
 public class DeliveryListView extends javax.swing.JFrame {
 
     public DeliveryListView() {
+        super("Delivery List");
         initComponents();
+        setLocationRelativeTo(null);
     }
     
     @SuppressWarnings("unchecked")

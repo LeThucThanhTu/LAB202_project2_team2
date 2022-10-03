@@ -1,9 +1,13 @@
 package View.Account;
 
+import java.awt.event.ActionListener;
+
 public class AccountMngView extends javax.swing.JFrame {
 
     public AccountMngView() {
+        super("Account Mangement");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -18,7 +22,7 @@ public class AccountMngView extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         searchButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        addButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         updateButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
@@ -29,7 +33,7 @@ public class AccountMngView extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         frame.setBackground(new java.awt.Color(255, 255, 255));
         frame.setLayout(null);
@@ -67,16 +71,11 @@ public class AccountMngView extends javax.swing.JFrame {
         frame.add(deleteButton);
         deleteButton.setBounds(460, 250, 250, 60);
 
-        jButton1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jButton1.setText("Add new Account");
-        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        frame.add(jButton1);
-        jButton1.setBounds(460, 140, 250, 60);
+        addButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        addButton.setText("Add new Account");
+        addButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        frame.add(addButton);
+        addButton.setBounds(460, 140, 250, 60);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         frame.add(jLabel5);
@@ -84,11 +83,6 @@ public class AccountMngView extends javax.swing.JFrame {
 
         updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         updateButton.setText("Update Account");
-        updateButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateButtonActionPerformed(evt);
-            }
-        });
         frame.add(updateButton);
         updateButton.setBounds(459, 365, 250, 50);
 
@@ -135,20 +129,38 @@ public class AccountMngView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_updateButtonActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    
+    public void addAddButtonListener(ActionListener listener) {
+        addButton.addActionListener(listener);
+    }
+    
+    public void addDeleteButtonListener(ActionListener listener) {
+        deleteButton.addActionListener(listener);
+    }
+    
+    public void addSearchButtonListener(ActionListener listener) {
+        searchButton.addActionListener(listener);
+    }
+    
+    public void addUpdateButtonListener(ActionListener listener) {
+        updateButton.addActionListener(listener);
+    }
+    
+    public void addSaveButtonListener(ActionListener listener) {
+        saveButton.addActionListener(listener);
+    }
+    
+    public void addPrintAllButtonListener (ActionListener listener) {
+        printAllButton.addActionListener(listener);
+    }
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addButton;
     private javax.swing.JButton backButton;
     private javax.swing.JButton deleteButton;
     private javax.swing.JPanel frame;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;

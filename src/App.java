@@ -1,7 +1,7 @@
 
 import Controller.BossController;
 import Controller.DealerMngController;
-import Controller.DeliveryController;
+import Controller.DeliveryMngController;
 import Controller.LoginController;
 import Model.Entity.Account;
 import Model.Entity.LogIn;
@@ -71,7 +71,7 @@ public class App {
     
     private static void showDeliveriesMngView() {
         DeliveryMngView deliveryView = new DeliveryMngView();
-        DeliveryController deliveryCtrl = new DeliveryController(deliveryView);
+        DeliveryMngController deliveryCtrl = new DeliveryMngController(deliveryView);
         deliveryCtrl.showDeliveryMngView();
     }
     

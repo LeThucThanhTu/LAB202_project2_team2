@@ -1,9 +1,15 @@
 package View.Account;
 
+import Model.Entity.Account;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+
 public class UpdateAccountView extends javax.swing.JFrame {
 
     public UpdateAccountView() {
+        super("Update Account");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -12,23 +18,25 @@ public class UpdateAccountView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         nameField = new javax.swing.JTextField();
-        phoneField = new javax.swing.JTextField();
+        pwdField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        inputField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        addressField = new javax.swing.JTextField();
+        roleField = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        deleteButton = new javax.swing.JButton();
+        updateButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        searchButton = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -42,12 +50,12 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jPanel1.add(nameField);
         nameField.setBounds(290, 390, 240, 40);
 
-        phoneField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        phoneField.setForeground(new java.awt.Color(153, 153, 153));
-        phoneField.setText("PassWord");
-        phoneField.setBorder(null);
-        jPanel1.add(phoneField);
-        phoneField.setBounds(290, 490, 240, 40);
+        pwdField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        pwdField.setForeground(new java.awt.Color(153, 153, 153));
+        pwdField.setText("PassWord");
+        pwdField.setBorder(null);
+        jPanel1.add(pwdField);
+        pwdField.setBounds(290, 490, 240, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -63,12 +71,12 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jPanel1.add(jLabel4);
         jLabel4.setBounds(280, 380, 270, 60);
 
-        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField1.setText("ID");
-        jTextField1.setBorder(null);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(450, 180, 530, 70);
+        inputField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        inputField.setForeground(new java.awt.Color(204, 204, 204));
+        inputField.setText("Username");
+        inputField.setBorder(null);
+        jPanel1.add(inputField);
+        inputField.setBounds(450, 180, 530, 70);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel1.add(jLabel3);
@@ -80,17 +88,17 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jPanel1.add(jLabel6);
         jLabel6.setBounds(140, 380, 170, 60);
 
-        addressField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        addressField.setForeground(new java.awt.Color(153, 153, 153));
-        addressField.setText("Role");
-        addressField.setBorder(null);
-        addressField.addActionListener(new java.awt.event.ActionListener() {
+        roleField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        roleField.setForeground(new java.awt.Color(153, 153, 153));
+        roleField.setText("Role");
+        roleField.setBorder(null);
+        roleField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addressFieldActionPerformed(evt);
+                roleFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(addressField);
-        addressField.setBounds(780, 390, 240, 40);
+        jPanel1.add(roleField);
+        roleField.setBounds(780, 390, 240, 40);
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(153, 153, 153));
@@ -113,11 +121,11 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(-340, -290, 1010, 770);
 
-        deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        deleteButton.setForeground(new java.awt.Color(153, 153, 153));
-        deleteButton.setText("Update");
-        jPanel1.add(deleteButton);
-        deleteButton.setBounds(610, 610, 250, 50);
+        updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        updateButton.setForeground(new java.awt.Color(153, 153, 153));
+        updateButton.setText("Update");
+        jPanel1.add(updateButton);
+        updateButton.setBounds(610, 610, 250, 50);
 
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setForeground(new java.awt.Color(153, 153, 153));
@@ -137,6 +145,16 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jPanel1.add(jLabel14);
         jLabel14.setBounds(600, 610, 270, 60);
 
+        searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(153, 153, 153));
+        searchButton.setText("Search");
+        jPanel1.add(searchButton);
+        searchButton.setBounds(590, 270, 250, 50);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(580, 270, 270, 60);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -151,20 +169,56 @@ public class UpdateAccountView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addressFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressFieldActionPerformed
+    private void roleFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addressFieldActionPerformed
+    }//GEN-LAST:event_roleFieldActionPerformed
 
-
+    public void addSearchButtonListener(ActionListener listener) {
+        searchButton.addActionListener(listener);
+    }
+    
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
+    public void addUpdateButtonListener (ActionListener listener) {
+        updateButton.addActionListener(listener);
+    }
+    public String getData() {
+        return inputField.getText();
+    }
+    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+    
+    public void setTextFieldValue(Account d) {
+        nameField.setText(d.getAccName());
+        pwdField.setText(d.getPwd());
+        roleField.setText(d.getRole());
+    }
+    
+    public void setNullTextField() {
+        nameField.setText("NULL");
+        pwdField.setText("NULL");
+        roleField.setText("NULL");
+    }
+    
+    public void clearTextField() {
+        nameField.setText("UserName");
+        pwdField.setText("Password");
+        roleField.setText("Role");
+        inputField.setText("Username");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField addressField;
     private javax.swing.JButton backButton;
-    private javax.swing.JButton deleteButton;
+    private javax.swing.JTextField inputField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -174,8 +228,10 @@ public class UpdateAccountView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nameField;
-    private javax.swing.JTextField phoneField;
+    private javax.swing.JTextField pwdField;
+    private javax.swing.JTextField roleField;
+    private javax.swing.JButton searchButton;
+    private javax.swing.JButton updateButton;
     // End of variables declaration//GEN-END:variables
 }

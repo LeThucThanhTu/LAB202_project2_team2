@@ -5,11 +5,11 @@ import View.Delivery.DeliveryMngView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DeliveryController {
+public class DeliveryMngController {
     private DeliveryMngView deliveryMngView;
     private DeliveryDAO deliveryDAO;
     
-    public DeliveryController(DeliveryMngView view) {
+    public DeliveryMngController(DeliveryMngView view) {
         this.deliveryMngView = view;
         deliveryDAO = new DeliveryDAO();
         deliveryMngView.addAddButtonListener(new ActionListener() {
@@ -57,5 +57,9 @@ public class DeliveryController {
     
     public void showDeliveryMngView() {
         deliveryMngView.setVisible(true);
+    }
+    
+    public void exitByDispose() {
+        deliveryMngView.setDefaultCloseOperation(deliveryMngView.DISPOSE_ON_CLOSE);
     }
 }
