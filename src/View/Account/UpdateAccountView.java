@@ -37,6 +37,10 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        searchButton = new javax.swing.JButton();
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
 =======
         searchButton = new javax.swing.JButton();
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
@@ -126,6 +130,7 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jLabel5.setBounds(-340, -290, 1010, 770);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         deleteButton.setForeground(new java.awt.Color(153, 153, 153));
         deleteButton.setText("Update");
@@ -137,11 +142,16 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jPanel1.add(deleteButton);
         deleteButton.setBounds(610, 610, 250, 50);
 =======
+=======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         updateButton.setForeground(new java.awt.Color(153, 153, 153));
         updateButton.setText("Update");
         jPanel1.add(updateButton);
         updateButton.setBounds(610, 610, 250, 50);
+<<<<<<< HEAD
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
+=======
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
 
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
@@ -179,10 +189,13 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jLabel14.setBounds(600, 610, 270, 60);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel15);
         jLabel15.setBounds(570, 270, 270, 60);
 =======
+=======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         searchButton.setForeground(new java.awt.Color(153, 153, 153));
         searchButton.setText("Search");
@@ -192,6 +205,9 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel15);
         jLabel15.setBounds(580, 270, 270, 60);
+<<<<<<< HEAD
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
+=======
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -269,13 +285,19 @@ public class UpdateAccountView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nameField;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JTextField phoneField;
     private javax.swing.JButton searchButton;
 =======
+=======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
     private javax.swing.JTextField pwdField;
     private javax.swing.JTextField roleField;
     private javax.swing.JButton searchButton;
     private javax.swing.JButton updateButton;
+<<<<<<< HEAD
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
+=======
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
     // End of variables declaration//GEN-END:variables
 }

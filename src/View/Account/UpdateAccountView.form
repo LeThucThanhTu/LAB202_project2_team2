@@ -354,7 +354,10 @@
           </Constraints>
         </Component>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         <Component class="javax.swing.JButton" name="searchButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -371,6 +374,9 @@
             </Constraint>
           </Constraints>
         </Component>
+<<<<<<< HEAD
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
+=======
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         <Component class="javax.swing.JLabel" name="jLabel15">
           <Properties>
@@ -381,7 +387,11 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <AbsoluteConstraints x="570" y="270" width="270" height="60"/>
+=======
+              <AbsoluteConstraints x="580" y="270" width="270" height="60"/>
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
 =======
               <AbsoluteConstraints x="580" y="270" width="270" height="60"/>
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864

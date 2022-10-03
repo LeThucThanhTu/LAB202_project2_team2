@@ -162,6 +162,7 @@ public class RemoveAccountView extends javax.swing.JFrame {
         searchButton.setForeground(new java.awt.Color(153, 153, 153));
         searchButton.setText("Search");
 <<<<<<< HEAD
+<<<<<<< HEAD
         searchButton.setBorder(null);
         searchButton.setBorderPainted(false);
         searchButton.setContentAreaFilled(false);
@@ -174,12 +175,17 @@ public class RemoveAccountView extends javax.swing.JFrame {
         jPanel1.add(jLabel15);
         jLabel15.setBounds(580, 280, 270, 60);
 =======
+=======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         jPanel1.add(searchButton);
         searchButton.setBounds(610, 270, 250, 50);
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel15);
         jLabel15.setBounds(600, 270, 270, 60);
+<<<<<<< HEAD
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
+=======
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -254,7 +260,12 @@ public class RemoveAccountView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nameField;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JTextField phoneField;
+=======
+    private javax.swing.JTextField pwdField;
+    private javax.swing.JTextField roleField;
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
 =======
     private javax.swing.JTextField pwdField;
     private javax.swing.JTextField roleField;

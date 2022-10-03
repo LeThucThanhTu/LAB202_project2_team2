@@ -59,6 +59,7 @@ public class SearchAccountView extends javax.swing.JFrame {
         searchButton.setForeground(new java.awt.Color(153, 153, 153));
         searchButton.setText("Search");
 <<<<<<< HEAD
+<<<<<<< HEAD
         searchButton.setBorder(null);
         searchButton.setBorderPainted(false);
         searchButton.setContentAreaFilled(false);
@@ -69,6 +70,8 @@ public class SearchAccountView extends javax.swing.JFrame {
                 searchButtonActionPerformed(evt);
             }
         });
+=======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
 =======
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         jPanel1.add(searchButton);

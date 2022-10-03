@@ -22,8 +22,11 @@ public class AccountMngView extends javax.swing.JFrame {
         printAllButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
 <<<<<<< HEAD
+<<<<<<< HEAD
         jButton1 = new javax.swing.JButton();
 =======
+=======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         addButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
@@ -87,6 +90,7 @@ public class AccountMngView extends javax.swing.JFrame {
         deleteButton.setBounds(460, 250, 250, 60);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jButton1.setText("Add new Account");
@@ -103,11 +107,14 @@ public class AccountMngView extends javax.swing.JFrame {
         frame.add(jButton1);
         jButton1.setBounds(460, 140, 250, 60);
 =======
+=======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         addButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         addButton.setText("Add new Account");
         addButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         frame.add(addButton);
         addButton.setBounds(460, 140, 250, 60);
+<<<<<<< HEAD
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
 
         updateButton.setBackground(new java.awt.Color(255, 255, 255));
@@ -123,6 +130,15 @@ public class AccountMngView extends javax.swing.JFrame {
             }
         });
 =======
+>>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
+=======
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        frame.add(jLabel5);
+        jLabel5.setBounds(850, 250, 260, 70);
+
+        updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        updateButton.setText("Update Account");
 >>>>>>> 0d0b0cb4182744f2c10a6ac4d9632fb75b955864
         frame.add(updateButton);
         updateButton.setBounds(459, 365, 250, 50);
