@@ -28,6 +28,8 @@ public class SearchAccountView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        searchButton = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
         nameField = new javax.swing.JTextField();
         phoneField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -45,11 +47,26 @@ public class SearchAccountView extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
+
+        searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(153, 153, 153));
+        searchButton.setText("Search");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(searchButton);
+        searchButton.setBounds(590, 610, 250, 50);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(580, 610, 270, 60);
 
         nameField.setEditable(false);
         nameField.setBackground(new java.awt.Color(255, 255, 255));
@@ -139,7 +156,7 @@ public class SearchAccountView extends javax.swing.JFrame {
         backButton.setForeground(new java.awt.Color(153, 153, 153));
         backButton.setText("Back");
         jPanel1.add(backButton);
-        backButton.setBounds(460, 610, 250, 50);
+        backButton.setBounds(270, 610, 250, 50);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel10);
@@ -147,7 +164,7 @@ public class SearchAccountView extends javax.swing.JFrame {
 
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(450, 610, 270, 60);
+        jLabel13.setBounds(260, 610, 270, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,6 +185,10 @@ public class SearchAccountView extends javax.swing.JFrame {
     private void addressFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addressFieldActionPerformed
+
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,6 +234,7 @@ public class SearchAccountView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -225,5 +247,6 @@ public class SearchAccountView extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nameField;
     private javax.swing.JTextField phoneField;
+    private javax.swing.JButton searchButton;
     // End of variables declaration//GEN-END:variables
 }
