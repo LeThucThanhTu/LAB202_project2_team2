@@ -5,6 +5,8 @@
  */
 package View.LogIn;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author letu
@@ -15,7 +17,9 @@ public class BossView extends javax.swing.JFrame {
      * Creates new form BossView
      */
     public BossView() {
+        super("Boss Management");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -31,9 +35,7 @@ public class BossView extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         accountButton = new javax.swing.JButton();
-        backButton = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        DeliveryButton = new javax.swing.JButton();
+        deliveryButton = new javax.swing.JButton();
         dealerButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -63,21 +65,11 @@ public class BossView extends javax.swing.JFrame {
         jPanel1.add(accountButton);
         accountButton.setBounds(430, 250, 250, 50);
 
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
-        backButton.setText("Back");
-        jPanel1.add(backButton);
-        backButton.setBounds(430, 570, 250, 50);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(420, 560, 260, 70);
-
-        DeliveryButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        DeliveryButton.setForeground(new java.awt.Color(153, 153, 153));
-        DeliveryButton.setText("Delivery");
-        jPanel1.add(DeliveryButton);
-        DeliveryButton.setBounds(430, 450, 250, 50);
+        deliveryButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        deliveryButton.setForeground(new java.awt.Color(153, 153, 153));
+        deliveryButton.setText("Delivery");
+        jPanel1.add(deliveryButton);
+        deliveryButton.setBounds(430, 450, 250, 50);
 
         dealerButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         dealerButton.setForeground(new java.awt.Color(153, 153, 153));
@@ -119,51 +111,27 @@ public class BossView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BossView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BossView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BossView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BossView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new BossView().setVisible(true);
-            }
-        });
+    public void addAccountButtonListener(ActionListener listener) {
+        accountButton.addActionListener(listener);
     }
+    
+    public void addDealerButtonListener(ActionListener listener) {
+        dealerButton.addActionListener(listener);
+    }
+    
+    public void addDeliveryButtonListener(ActionListener listener) {
+        deliveryButton.addActionListener(listener);
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton DeliveryButton;
     private javax.swing.JButton accountButton;
-    private javax.swing.JButton backButton;
     private javax.swing.JButton dealerButton;
+    private javax.swing.JButton deliveryButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
