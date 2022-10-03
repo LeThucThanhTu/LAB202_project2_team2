@@ -1,10 +1,17 @@
 
 package View.Account;
 
+import Model.Entity.Account;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 public class AddAccountView extends javax.swing.JFrame {
 
     public AddAccountView() {
+        super("Add Account");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -83,11 +90,6 @@ public class AddAccountView extends javax.swing.JFrame {
         roleField.setForeground(new java.awt.Color(204, 204, 204));
         roleField.setText("Role");
         roleField.setBorder(null);
-        roleField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roleFieldActionPerformed(evt);
-            }
-        });
         jPanel2.add(roleField);
         roleField.setBounds(140, 460, 530, 70);
 
@@ -137,10 +139,33 @@ public class AddAccountView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void roleFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_roleFieldActionPerformed
-
+    public void addAddButtonListener(ActionListener listener) {
+        addButton.addActionListener(listener);
+    }
+    
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+    
+    public Account getData() {
+        String accName = usrField.getText();
+        String accPwd = pwdField.getText();
+        String role = roleField.getText();
+        Account a = new Account(accName, accPwd, role);
+        System.out.println(a);
+        return a;
+    }
+    
+    public void clearTextField() {
+        usrField.setText("User");
+        pwdField.setText("Password");
+        roleField.setText("Role");
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
     private javax.swing.JButton backButton;

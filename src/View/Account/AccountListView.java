@@ -3,7 +3,9 @@ package View.Account;
 public class AccountListView extends javax.swing.JFrame {
 
     public AccountListView() {
+        super("Account List");
         initComponents();
+        setLocationRelativeTo(null);
     }
     
     @SuppressWarnings("unchecked")

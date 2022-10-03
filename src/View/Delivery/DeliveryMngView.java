@@ -5,7 +5,9 @@ import java.awt.event.ActionListener;
 public class DeliveryMngView extends javax.swing.JFrame {
 
     public DeliveryMngView() {
+        super("Delivery Management");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

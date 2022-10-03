@@ -65,7 +65,7 @@ public class AccountDAO implements iDAO<Account> {
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();
-            if (object.toString().equals(next.getAccName().toString())) {
+            if (object.toString().equals(next.toString())) {
                 return true;
             }
         }
@@ -93,12 +93,13 @@ public class AccountDAO implements iDAO<Account> {
     public boolean delete(Account object) {
         if (!isExist(object)) return false;
         // case1 type hardcode
+        System.out.println("It is exist");
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();
-            if (object.toString().equals(next.getAccName().toString())) {
+            if (object.getAccName().equals(next.getAccName())) {
                 accList.remove(next);
-                System.out.println("-----DETELED-----");
+                
                 return true;
             }
         }
