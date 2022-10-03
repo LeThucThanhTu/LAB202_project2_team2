@@ -29,7 +29,7 @@ public class AccountChecker {
     }
 
     // check valiadity od an account
-    public boolean check(Account acc) {
+    public Account check(Account acc) {
         // read data in file
         List<String> lines = MyTool.readLinesFromFile(accFile);
 
@@ -37,27 +37,12 @@ public class AccountChecker {
         for (String line : lines) {
             String[] parts = line.split(this.SEPARATOR);
             if (parts.length < 3) {
-                return false;
+                return null;
             }
-            if (parts[0].equalsIgnoreCase(acc.getAccName()) && parts[1].equalsIgnoreCase(acc.getPwd())
-                    && parts[2].equalsIgnoreCase(acc.getRole())) {
-                return true;
+            if (parts[0].equalsIgnoreCase(acc.getAccName()) && parts[1].equalsIgnoreCase(acc.getPwd())) {
+                return new Account(parts[0], parts[1], parts[2]);
             }
         }
-        return false;
-    }
-
-    // test OK - It is optional
-    public static void main(String[] args) {
-        AccountChecker aChk = new AccountChecker();
-        Account acc = new Account("E001", "12345678", "BOSS");
-        boolean valid = aChk.check(acc);
-        System.out.println("Needs OK, OK?: " + valid);
-        acc = new Account("E002", "2345678", "ACC-1");
-        valid = aChk.check(acc);
-        System.out.println("Needs OK, OK?: " + valid);
-        acc = new Account("E003", "12345678", "ACC-2");
-        valid = aChk.check(acc);
-        System.out.println("Needs OK, OK?: " + valid);
+        return null;
     }
 }

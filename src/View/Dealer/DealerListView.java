@@ -3,7 +3,9 @@ package View.Dealer;
 public class DealerListView extends javax.swing.JFrame {
 
     public DealerListView() {
+        super("Dealer List");
         initComponents();
+        setLocationRelativeTo(null);
     }
     
     @SuppressWarnings("unchecked")
@@ -15,8 +17,6 @@ public class DealerListView extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -36,59 +36,11 @@ public class DealerListView extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Dealer List");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(730, 30, 250, 50);
+        jLabel3.setBounds(730, 30, 340, 50);
         jPanel2.add(jLabel8);
         jLabel8.setBounds(420, 670, 270, 0);
         jPanel2.add(jLabel9);
         jLabel9.setBounds(120, 670, 270, 0);
-
-        table.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
-        table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Name", "Phone", "Address", "Continuing"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(table);
-        if (table.getColumnModel().getColumnCount() > 0) {
-            table.getColumnModel().getColumn(0).setHeaderValue("ID");
-            table.getColumnModel().getColumn(1).setHeaderValue("Name");
-            table.getColumnModel().getColumn(2).setHeaderValue("Phone");
-            table.getColumnModel().getColumn(3).setHeaderValue("Address");
-            table.getColumnModel().getColumn(4).setHeaderValue("Continuing");
-        }
-
-        jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(30, 110, 1040, 480);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel2.add(jLabel1);
@@ -120,7 +72,5 @@ public class DealerListView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable table;
     // End of variables declaration//GEN-END:variables
 }

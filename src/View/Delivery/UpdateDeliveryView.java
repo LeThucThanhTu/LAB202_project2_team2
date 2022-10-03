@@ -58,7 +58,7 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(153, 153, 153));
         jLabel2.setText("Update Delivery");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(540, 90, 380, 70);
+        jLabel2.setBounds(540, 90, 430, 70);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel4);

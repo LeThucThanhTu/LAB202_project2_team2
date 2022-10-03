@@ -40,7 +40,7 @@ public class AddDeliveryView extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Add New Delivery");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(130, 50, 410, 50);
+        jLabel3.setBounds(130, 50, 530, 50);
 
         pwdField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         pwdField.setForeground(new java.awt.Color(204, 204, 204));

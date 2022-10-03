@@ -34,7 +34,7 @@ public class DeliveryListView extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Delivery List");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(690, 50, 290, 50);
+        jLabel3.setBounds(690, 50, 400, 50);
         jPanel2.add(jLabel8);
         jLabel8.setBounds(420, 670, 270, 0);
         jPanel2.add(jLabel9);
