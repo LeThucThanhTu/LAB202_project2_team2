@@ -1,4 +1,5 @@
 
+import Controller.BossController;
 import Controller.DealerMngController;
 import Controller.DeliveryController;
 import Controller.LoginController;
@@ -6,6 +7,7 @@ import Model.Entity.Account;
 import Model.Entity.LogIn;
 import View.Dealer.DealerMngView;
 import View.Delivery.DeliveryMngView;
+import View.LogIn.BossView;
 import View.LogIn.LogInView;
 
 /*
@@ -56,7 +58,9 @@ public class App {
     }
     
     private static void showBossMngView() {
-        System.out.println("Boss Mng View");
+        BossView bossView = new BossView();
+        BossController bossCtrl = new BossController(bossView);
+        bossCtrl.showBossView();
     }
     
     private static void showDealerMngView() {
