@@ -50,7 +50,7 @@ public class DealerDAO implements iDAO<Dealer> {
     @Override
     public ArrayList<Dealer> readFromFile() {
         ArrayList<Dealer> ls = new ArrayList<>();
-        ls.addAll((ArrayList<Dealer>) MyTool.readFile(fn));
+        ls.addAll((ArrayList<Dealer>) MyTool.readLinesFromFile(fn));
         return ls;
     }
 
