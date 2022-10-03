@@ -55,7 +55,7 @@ public class BossView extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
         jLabel4.setText("Boss's Menu");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(410, 90, 290, 60);
+        jLabel4.setBounds(410, 90, 370, 60);
 
         accountButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         accountButton.setForeground(new java.awt.Color(153, 153, 153));

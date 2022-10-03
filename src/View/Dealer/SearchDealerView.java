@@ -5,9 +5,13 @@
  */
 package View.Dealer;
 
+import Model.Entity.Dealer;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author letu
+ * @author lethu
  */
 public class SearchDealerView extends javax.swing.JFrame {
 
@@ -15,7 +19,9 @@ public class SearchDealerView extends javax.swing.JFrame {
      * Creates new form SearchDealerViewNew
      */
     public SearchDealerView() {
+        super("Dealer Search");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -33,7 +39,7 @@ public class SearchDealerView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        idField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         isContField = new javax.swing.JTextField();
@@ -82,18 +88,23 @@ public class SearchDealerView extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(153, 153, 153));
         jLabel2.setText("Search Dealer");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(570, 80, 310, 70);
+        jLabel2.setBounds(570, 80, 480, 70);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel4);
         jLabel4.setBounds(280, 380, 270, 60);
 
-        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField1.setText("ID");
-        jTextField1.setBorder(null);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(450, 180, 530, 70);
+        idField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        idField.setForeground(new java.awt.Color(204, 204, 204));
+        idField.setText("ID");
+        idField.setBorder(null);
+        idField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idFieldActionPerformed(evt);
+            }
+        });
+        jPanel1.add(idField);
+        idField.setBounds(450, 180, 530, 70);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel1.add(jLabel3);
@@ -103,7 +114,7 @@ public class SearchDealerView extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(153, 153, 153));
         jLabel6.setText("Name");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(180, 380, 80, 60);
+        jLabel6.setBounds(180, 380, 240, 60);
 
         isContField.setEditable(false);
         isContField.setBackground(new java.awt.Color(255, 255, 255));
@@ -137,7 +148,7 @@ public class SearchDealerView extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(153, 153, 153));
         jLabel7.setText("Phone");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(180, 490, 70, 40);
+        jLabel7.setBounds(180, 490, 220, 40);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel8);
@@ -148,7 +159,7 @@ public class SearchDealerView extends javax.swing.JFrame {
         jLabel9.setText("Address");
         jLabel9.setToolTipText("");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(660, 390, 100, 40);
+        jLabel9.setBounds(660, 390, 220, 40);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel1.add(jLabel5);
@@ -168,7 +179,7 @@ public class SearchDealerView extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(153, 153, 153));
         jLabel11.setText("Continue");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(660, 490, 110, 32);
+        jLabel11.setBounds(660, 490, 220, 32);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel12);
@@ -210,45 +221,44 @@ public class SearchDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_isContFieldActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SearchDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SearchDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SearchDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SearchDealerView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+    private void idFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idFieldActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SearchDealerView().setVisible(true);
-            }
-        });
+    public void addSearchButtonListener(ActionListener listener) {
+        searchButton.addActionListener(listener);
+    }
+    
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
+    public String getIDData() {
+        return idField.getText();
+    }
+    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+    
+    public void setTextFieldValue(Dealer d) {
+        nameField.setText(d.getName());
+        addressField.setText(d.getAddr());
+        isContField.setText(d.getContinuing() + "");
+        phoneField.setText(d.getPhone());
+    }
+    
+    public void setNullTextField() {
+        nameField.setText("NULL");
+        addressField.setText("NULL");
+        isContField.setText("NULL");
+        phoneField.setText("NULL");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField addressField;
     private javax.swing.JButton backButton;
+    private javax.swing.JTextField idField;
     private javax.swing.JTextField isContField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -265,7 +275,6 @@ public class SearchDealerView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nameField;
     private javax.swing.JTextField phoneField;
     private javax.swing.JButton searchButton;

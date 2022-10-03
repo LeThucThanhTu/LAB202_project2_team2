@@ -1,9 +1,15 @@
 package View.Dealer;
 
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 public class AddDealerView extends javax.swing.JFrame {
 
     public AddDealerView() {
+        super("Add Dealer");
         initComponents();
+        setLocationRelativeTo(null);
     }
     
     @SuppressWarnings("unchecked")
@@ -53,7 +59,7 @@ public class AddDealerView extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Add New Dealer");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(130, 30, 370, 50);
+        jLabel3.setBounds(130, 30, 520, 50);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel4);
@@ -139,6 +145,40 @@ public class AddDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_addressFieldActionPerformed
 
+    public void addAddButtonListener(ActionListener listener) {
+        addButton.addActionListener(listener);
+    }
+    
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+    
+    public ArrayList<String> getData() {
+        ArrayList<String> list = new ArrayList();
+        String id = idField.getText();
+        String name = nameField.getText();
+        String addr = addressField.getText();
+        String phone = phoneField.getText();
+        list.add(id);
+        list.add(name);
+        list.add(addr);
+        list.add(phone);
+        list.add("true");
+        return list;
+    }
+    
+    public void clearTextField() {
+        idField.setText("ID");
+        nameField.setText("Name");
+        addressField.setText("Address");
+        phoneField.setText("Phone");
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
     private javax.swing.JTextField addressField;

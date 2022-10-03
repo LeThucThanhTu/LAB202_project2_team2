@@ -1,9 +1,15 @@
 package View.Dealer;
 
+import Model.Entity.Dealer;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+
 public class UpdateDealerView extends javax.swing.JFrame {
 
     public UpdateDealerView() {
+        super("Dealer Update");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -16,7 +22,7 @@ public class UpdateDealerView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        idField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         isContField = new javax.swing.JTextField();
@@ -25,13 +31,15 @@ public class UpdateDealerView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        deleteButton = new javax.swing.JButton();
+        updateButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        searchButton = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -60,18 +68,18 @@ public class UpdateDealerView extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(153, 153, 153));
         jLabel2.setText("Update Dealer");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(530, 90, 340, 70);
+        jLabel2.setBounds(530, 90, 480, 70);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel4);
         jLabel4.setBounds(280, 380, 270, 60);
 
-        jTextField1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(204, 204, 204));
-        jTextField1.setText("ID");
-        jTextField1.setBorder(null);
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(450, 180, 530, 70);
+        idField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        idField.setForeground(new java.awt.Color(204, 204, 204));
+        idField.setText("ID");
+        idField.setBorder(null);
+        jPanel1.add(idField);
+        idField.setBounds(450, 180, 530, 70);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel1.add(jLabel3);
@@ -81,7 +89,7 @@ public class UpdateDealerView extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(153, 153, 153));
         jLabel6.setText("Name");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(180, 380, 80, 60);
+        jLabel6.setBounds(180, 380, 110, 60);
 
         isContField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         isContField.setForeground(new java.awt.Color(153, 153, 153));
@@ -111,7 +119,7 @@ public class UpdateDealerView extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(153, 153, 153));
         jLabel7.setText("Phone");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(180, 490, 70, 40);
+        jLabel7.setBounds(180, 490, 110, 40);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel8);
@@ -122,17 +130,17 @@ public class UpdateDealerView extends javax.swing.JFrame {
         jLabel9.setText("Address");
         jLabel9.setToolTipText("");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(660, 390, 100, 40);
+        jLabel9.setBounds(660, 390, 160, 40);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel1.add(jLabel5);
         jLabel5.setBounds(-340, -290, 1010, 770);
 
-        deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        deleteButton.setForeground(new java.awt.Color(153, 153, 153));
-        deleteButton.setText("Update");
-        jPanel1.add(deleteButton);
-        deleteButton.setBounds(610, 610, 250, 50);
+        updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        updateButton.setForeground(new java.awt.Color(153, 153, 153));
+        updateButton.setText("Update");
+        jPanel1.add(updateButton);
+        updateButton.setBounds(610, 610, 250, 50);
 
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setForeground(new java.awt.Color(153, 153, 153));
@@ -148,7 +156,7 @@ public class UpdateDealerView extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(153, 153, 153));
         jLabel11.setText("Continue");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(660, 490, 110, 32);
+        jLabel11.setBounds(660, 490, 200, 32);
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel12);
@@ -161,6 +169,16 @@ public class UpdateDealerView extends javax.swing.JFrame {
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel14);
         jLabel14.setBounds(600, 610, 270, 60);
+
+        searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(153, 153, 153));
+        searchButton.setText("Search");
+        jPanel1.add(searchButton);
+        searchButton.setBounds(620, 270, 250, 50);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(610, 270, 270, 60);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -184,12 +202,63 @@ public class UpdateDealerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_isContFieldActionPerformed
 
-
+    public void addUpdateButton(ActionListener listener) {
+        updateButton.addActionListener(listener);
+    }
+    
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
+    public void addSearchButtonListener(ActionListener listener) {
+        searchButton.addActionListener(listener);
+    }
+    
+    public String getIDData() {
+        return idField.getText();
+    }
+    
+    public Dealer getNewDealer() {
+        String name = nameField.getText();
+        String addr = addressField.getText();
+        String cont = isContField.getText();
+        String phone = phoneField.getText();
+        String id = idField.getText();
+        String s = id + Dealer.SEPARATOR + name + Dealer.SEPARATOR + addr + Dealer.SEPARATOR 
+                + phone + Dealer.SEPARATOR + cont;
+        return new Dealer(s);
+    }
+    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+    
+    public void setTextFieldValue(Dealer d) {
+        nameField.setText(d.getName());
+        addressField.setText(d.getAddr());
+        isContField.setText(d.getContinuing() + "");
+        phoneField.setText(d.getPhone());
+    }
+    
+    public void setNullTextField() {
+        nameField.setText("NULL");
+        addressField.setText("NULL");
+        isContField.setText("NULL");
+        phoneField.setText("NULL");
+    }
+    
+    public void clearTextField() {
+        idField.setText("ID");
+        nameField.setText("Name");
+        addressField.setText("Address");
+        isContField.setText("true/false");
+        phoneField.setText("Phone");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField addressField;
     private javax.swing.JButton backButton;
-    private javax.swing.JButton deleteButton;
+    private javax.swing.JTextField idField;
     private javax.swing.JTextField isContField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -197,6 +266,7 @@ public class UpdateDealerView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -206,8 +276,9 @@ public class UpdateDealerView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField nameField;
     private javax.swing.JTextField phoneField;
+    private javax.swing.JButton searchButton;
+    private javax.swing.JButton updateButton;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,31 +1,53 @@
 package Model.Entity;
 
 public class Account {
-    private String AccName, Pwd, role;
-
-    public Account(String AccName, String Pwd, String role) {
-        this.AccName = AccName;
-        this.Pwd = Pwd;
-        this.role = role;
-    }
+    public static final char SEPARATOR = ',';
+    private String accName; // ID
+    private String pwd; // password
+    private String role;
 
     public Account() {
     }
-
-    public String getAccName() {
-        return AccName;
+    
+    public Account(String accName, String accPwd) {
+        this.accName = accName;
+        this.pwd = accPwd;
+        this.role = null;
+    }
+    
+    public Account(String line) {
+        String[] parts = line.split("" + this.SEPARATOR);
+        accName = parts[0].trim();
+        pwd = parts[1].trim();
+        role = parts[2].trim();
+    }
+    
+    //constructor - IMPLEMENT IT
+    public Account(String accName, String pwd, String role) {
+        this.accName = accName;
+        this.pwd = pwd;
+        this.role = role;
     }
 
-    public void setAccName(String AccName) {
-        this.AccName = AccName;
+    @Override
+    public String toString() {
+        return "Account [accName=" + getAccName() + ", pwd=" + getPwd() + ", role=" + getRole() + "]";
+    }
+
+    public String getAccName() {
+        return accName;
+    }
+
+    public void setAccName(String accName) {
+        this.accName = accName;
     }
 
     public String getPwd() {
-        return Pwd;
+        return pwd;
     }
 
-    public void setPwd(String Pwd) {
-        this.Pwd = Pwd;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     public String getRole() {
@@ -35,10 +57,4 @@ public class Account {
     public void setRole(String role) {
         this.role = role;
     }
-
-    @Override
-    public String toString() {
-        return "Account [AccName=" + AccName + ", Pwd=" + Pwd + ", role=" + role + "]";
-    }
-
 }

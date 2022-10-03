@@ -57,7 +57,7 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(153, 153, 153));
         jLabel2.setText("Update Account");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(510, 90, 380, 70);
+        jLabel2.setBounds(510, 90, 450, 70);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel4);
@@ -78,7 +78,7 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(153, 153, 153));
         jLabel6.setText("UserName");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(140, 380, 120, 60);
+        jLabel6.setBounds(140, 380, 170, 60);
 
         addressField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         addressField.setForeground(new java.awt.Color(153, 153, 153));
@@ -96,7 +96,7 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(153, 153, 153));
         jLabel7.setText("Password");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(140, 490, 110, 40);
+        jLabel7.setBounds(140, 490, 170, 40);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel8);
@@ -107,7 +107,7 @@ public class UpdateAccountView extends javax.swing.JFrame {
         jLabel9.setText("Role");
         jLabel9.setToolTipText("");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(700, 390, 60, 40);
+        jLabel9.setBounds(700, 390, 150, 40);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel1.add(jLabel5);
