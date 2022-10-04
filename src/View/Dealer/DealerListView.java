@@ -30,6 +30,7 @@ public class DealerListView extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -40,6 +41,11 @@ public class DealerListView extends javax.swing.JFrame {
         backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         backButton.setForeground(new java.awt.Color(153, 153, 153));
         backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
         jPanel2.add(backButton);
         backButton.setBounds(430, 625, 250, 60);
 
@@ -77,6 +83,10 @@ public class DealerListView extends javax.swing.JFrame {
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(220, 240, 880, 150);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(420, 620, 290, 80);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,6 +108,7 @@ public class DealerListView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel8;

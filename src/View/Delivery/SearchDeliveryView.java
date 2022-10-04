@@ -34,20 +34,20 @@ public class SearchDeliveryView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        backButton = new javax.swing.JButton();
+        searchButtton = new javax.swing.JButton();
         pdNameField = new javax.swing.JTextField();
+        deliveryIDField = new javax.swing.JTextField();
+        addressField = new javax.swing.JTextField();
+        cusAddrField = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        deliveryIDField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        addressField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
-        cusAddrField = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        searchButtton = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -55,6 +55,33 @@ public class SearchDeliveryView extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
+
+        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        backButton.setForeground(new java.awt.Color(153, 153, 153));
+        backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
+        jPanel1.add(backButton);
+        backButton.setBounds(290, 610, 250, 50);
+
+        searchButtton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        searchButtton.setForeground(new java.awt.Color(153, 153, 153));
+        searchButtton.setText("Search");
+        searchButtton.setBorder(null);
+        searchButtton.setBorderPainted(false);
+        searchButtton.setContentAreaFilled(false);
+        searchButtton.setFocusPainted(false);
+        searchButtton.setFocusable(false);
+        searchButtton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButttonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(searchButtton);
+        searchButtton.setBounds(620, 610, 250, 50);
 
         pdNameField.setEditable(false);
         pdNameField.setBackground(new java.awt.Color(255, 255, 255));
@@ -65,36 +92,12 @@ public class SearchDeliveryView extends javax.swing.JFrame {
         jPanel1.add(pdNameField);
         pdNameField.setBounds(290, 390, 240, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(20, 20, 220, 250);
-
-        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel2.setText("Search Delivery");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(530, 80, 450, 70);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(280, 380, 270, 60);
-
         deliveryIDField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         deliveryIDField.setForeground(new java.awt.Color(204, 204, 204));
         deliveryIDField.setText("Delivery ID");
         deliveryIDField.setBorder(null);
         jPanel1.add(deliveryIDField);
         deliveryIDField.setBounds(450, 180, 530, 70);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(430, 160, 570, 110);
-
-        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel6.setText("Product name");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(110, 380, 180, 60);
 
         addressField.setEditable(false);
         addressField.setBackground(new java.awt.Color(255, 255, 255));
@@ -110,6 +113,34 @@ public class SearchDeliveryView extends javax.swing.JFrame {
         jPanel1.add(addressField);
         addressField.setBounds(840, 390, 240, 40);
 
+        cusAddrField.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
+        jPanel1.add(cusAddrField);
+        cusAddrField.setBounds(830, 380, 270, 60);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(20, 20, 220, 250);
+
+        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel2.setText("Search Delivery");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(530, 80, 450, 70);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(280, 380, 270, 60);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(430, 160, 570, 110);
+
+        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel6.setText("Product name");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(110, 380, 180, 60);
+
         jLabel9.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(153, 153, 153));
         jLabel9.setText("Customer Address");
@@ -121,30 +152,9 @@ public class SearchDeliveryView extends javax.swing.JFrame {
         jPanel1.add(jLabel5);
         jLabel5.setBounds(-340, -290, 1010, 770);
 
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
-        backButton.setText("Back");
-        jPanel1.add(backButton);
-        backButton.setBounds(290, 610, 250, 50);
-
-        cusAddrField.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
-        jPanel1.add(cusAddrField);
-        cusAddrField.setBounds(830, 380, 270, 60);
-
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel13);
         jLabel13.setBounds(280, 610, 270, 60);
-
-        searchButtton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        searchButtton.setForeground(new java.awt.Color(153, 153, 153));
-        searchButtton.setText("Search");
-        searchButtton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchButttonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(searchButtton);
-        searchButtton.setBounds(620, 610, 250, 50);
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel14);
@@ -187,7 +197,7 @@ public class SearchDeliveryView extends javax.swing.JFrame {
     
     public void setNullTextField() {
         pdNameField.setText("NULL");
-        cusAddrField.setText("NULL");
+        addressField.setText("NULL");
     }
     
     public String getData() {

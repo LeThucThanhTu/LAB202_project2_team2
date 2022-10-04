@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model.TableModel;
 
 import Model.Entity.Delivery;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
-/**
- *
- * @author this pc
- */
 public class DeliveryTableModel extends AbstractTableModel{
     private String[] colNames = {"Delivery ID", "Product Name", "Customer Address"};
     private ArrayList<Delivery> list;

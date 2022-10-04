@@ -31,13 +31,14 @@ public class SearchAccountView extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         searchButton = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
+        backButton = new javax.swing.JButton();
         nameField = new javax.swing.JTextField();
         pwdField = new javax.swing.JTextField();
+        inputField = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        inputField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         roleField = new javax.swing.JTextField();
@@ -45,7 +46,6 @@ public class SearchAccountView extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        backButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
@@ -61,9 +61,11 @@ public class SearchAccountView extends javax.swing.JFrame {
         jPanel1.add(searchButton);
         searchButton.setBounds(590, 610, 250, 50);
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
-        jPanel1.add(jLabel14);
-        jLabel14.setBounds(580, 610, 270, 60);
+        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        backButton.setForeground(new java.awt.Color(153, 153, 153));
+        backButton.setText("Back");
+        jPanel1.add(backButton);
+        backButton.setBounds(270, 610, 250, 50);
 
         nameField.setEditable(false);
         nameField.setBackground(new java.awt.Color(255, 255, 255));
@@ -83,6 +85,17 @@ public class SearchAccountView extends javax.swing.JFrame {
         jPanel1.add(pwdField);
         pwdField.setBounds(290, 490, 240, 40);
 
+        inputField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        inputField.setForeground(new java.awt.Color(204, 204, 204));
+        inputField.setText("Username");
+        inputField.setBorder(null);
+        jPanel1.add(inputField);
+        inputField.setBounds(450, 180, 530, 70);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(580, 610, 270, 60);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(20, 20, 220, 250);
@@ -96,13 +109,6 @@ public class SearchAccountView extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel4);
         jLabel4.setBounds(280, 380, 270, 60);
-
-        inputField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        inputField.setForeground(new java.awt.Color(204, 204, 204));
-        inputField.setText("Username");
-        inputField.setBorder(null);
-        jPanel1.add(inputField);
-        inputField.setBounds(450, 180, 530, 70);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel1.add(jLabel3);
@@ -143,12 +149,6 @@ public class SearchAccountView extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel1.add(jLabel5);
         jLabel5.setBounds(-340, -290, 1010, 770);
-
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
-        backButton.setText("Back");
-        jPanel1.add(backButton);
-        backButton.setBounds(270, 610, 250, 50);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel10);

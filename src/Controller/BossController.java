@@ -32,10 +32,11 @@ public class BossController {
         this.bossView = bossView;
         accDAO = AccountDAO.getInstance();
         
-        // add account button listener in boss view
+        // Add ActionListener For Account Button in Boss View
         bossView.addAccountButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                //Make Account Mangement View visible
                 accMngView = new AccountMngView();
                 accCtrl = new AccountController(accMngView);
                 accCtrl.showAccMngView();
@@ -43,10 +44,11 @@ public class BossController {
             }
         });
         
-        //add dealer button listener in boss view
+        //Add ActionListener For Dealer Button in Boss View
         bossView.addDealerButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                //Make Dealer Management View visible
                 dealerMngView = new DealerMngView();
                 dealerMngCtrl = new DealerMngController(dealerMngView);
                 dealerMngCtrl.showDealerMngView();
@@ -54,10 +56,11 @@ public class BossController {
             }
         });
         
-        //add delivery button listener in boss view
+        //Add ActionListener For Delivery Button in Boss View
         bossView.addDeliveryButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                //Make Delivery Management View visible
                 deliveryMngView = new DeliveryMngView();
                 deliveryCtrl = new DeliveryMngController(deliveryMngView);
                 deliveryCtrl.showDeliveryMngView();

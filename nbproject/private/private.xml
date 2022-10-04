@@ -3,36 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Dealer/DealerMngView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/DAO/DeliveryDAO.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/LogIn/BossView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Delivery/DeliveryListView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/TableModel/DealerTableModel.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/DAO/AccountDAO.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/Entity/Dealer.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Delivery/AddDeliveryView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Controller/DeliveryMngController.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/TableModel/AccountTableModel.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Delivery/RemoveDeliveryView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Delivery/DeliveryMngView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Dealer/RemoveDealerView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Lib/MyTool.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/Entity/LogIn.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Dealer/DealerListView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Delivery/UpdateDeliveryView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/Entity/Account.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Dealer/AddDealerView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Controller/DealerMngController.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/TableModel/DeliveryTableModel.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Controller/LoginController.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Account/AccountMngView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Dealer/UpdateDealerView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/App.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Controller/BossController.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Controller/AccountController.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/Entity/Delivery.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/View/Delivery/SearchDeliveryView.java</file>
-            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2/src/Model/DAO/DealerDAO.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/Model/DAO/AccountDAO.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/View/Delivery/UpdateDeliveryView.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/Controller/AccountController.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/View/Dealer/AddDealerView.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/View/Delivery/DeliveryListView.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/Model/DAO/DealerDAO.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/Controller/DealerMngController.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/View/Delivery/DeliveryMngView.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/Controller/LoginController.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/Controller/DeliveryMngController.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/View/Delivery/SearchDeliveryView.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/View/Delivery/RemoveDeliveryView.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/Model/DAO/DeliveryDAO.java</file>
+            <file>file:/C:/Users/this%20pc/Desktop/LAB202_project2_team2%20-%20Copy/src/View/Account/AccountMngView.java</file>
         </group>
     </open-files>
 </project-private>

@@ -2,6 +2,7 @@ package View.Delivery;
 
 import Model.Entity.Delivery;
 import Model.TableModel.DeliveryTableModel;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class DeliveryListView extends javax.swing.JFrame {
@@ -35,7 +36,14 @@ public class DeliveryListView extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
+        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        backButton.setForeground(new java.awt.Color(153, 153, 153));
         backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
         jPanel2.add(backButton);
         backButton.setBounds(449, 620, 250, 50);
 
@@ -44,8 +52,10 @@ public class DeliveryListView extends javax.swing.JFrame {
         jLabel3.setText("Delivery List");
         jPanel2.add(jLabel3);
         jLabel3.setBounds(690, 50, 400, 50);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel2.add(jLabel8);
-        jLabel8.setBounds(420, 670, 270, 0);
+        jLabel8.setBounds(440, 620, 250, 50);
         jPanel2.add(jLabel9);
         jLabel9.setBounds(120, 670, 270, 0);
 
@@ -87,6 +97,10 @@ public class DeliveryListView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
     private javax.swing.JLabel jLabel1;

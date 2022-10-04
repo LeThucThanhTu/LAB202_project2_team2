@@ -63,14 +63,13 @@ public class DealerDAO implements iDAO<Dealer> {
 
     @Override
     public boolean isExist(Dealer object) {
-        if (!dealList.isEmpty()) {
-            // case1
-            Iterator<Dealer> itr = dealList.iterator();
-            while (itr.hasNext()) {
-                Dealer next = itr.next();
-                if (object.toString().equals(next.toString())) {
-                    return true;
-                }
+        if(object == null) return false;
+        // case1
+        Iterator<Dealer> itr = dealList.iterator();
+        while (itr.hasNext()) {
+            Dealer next = itr.next();
+            if (object.toString().equals(next.toString())) {
+                return true;
             }
         }
         return false;

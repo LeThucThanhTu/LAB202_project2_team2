@@ -31,8 +31,6 @@ public class DealerTableModel extends AbstractTableModel {
         return colNames[i];
     }
     
-    
-     
     @Override
     public int getRowCount() {
         return list.size();
@@ -60,5 +58,4 @@ public class DealerTableModel extends AbstractTableModel {
         }
         return null;
     }
-    
 }

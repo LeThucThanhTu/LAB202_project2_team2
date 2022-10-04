@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Model.TableModel;
 
 import Model.Entity.Account;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
-/**
- *
- * @author this pc
- */
 public class AccountTableModel extends AbstractTableModel{
     private String[] colNames = {"Username", "Password", "Role"};
     private ArrayList<Account> list;
@@ -30,10 +22,6 @@ public class AccountTableModel extends AbstractTableModel{
     public String getColumnName(int i) {
         return colNames[i];
     }
-
-    
-    
-    
      
     @Override
     public int getRowCount() {

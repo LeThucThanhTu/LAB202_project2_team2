@@ -10,16 +10,6 @@ import View.Delivery.DeliveryMngView;
 import View.LogIn.BossView;
 import View.LogIn.LogInView;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author this pc
- */
 public class App {
     
     public static void main(String[] args) {
@@ -37,6 +27,7 @@ public class App {
             acc = LogIn.getInstance().getAccount();
             System.out.print("");
         }while (acc == null);
+        
         
         switch(acc.getRole()) {
             case "BOSS":

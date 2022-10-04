@@ -11,24 +11,23 @@ public class LogInView extends javax.swing.JFrame {
         super("Log In");
         initComponents();
         setLocationRelativeTo(null);
-//        setSize(Toolkit.getDefaultToolkit().getScreenSize());
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         frame = new javax.swing.JPanel();
+        button = new javax.swing.JButton();
+        forgotUsrButton = new javax.swing.JButton();
+        forgotPwdButton = new javax.swing.JButton();
         usrField = new javax.swing.JTextField();
         pwdField = new javax.swing.JPasswordField();
-        usrFrame = new javax.swing.JLabel();
-        pwdFrame = new javax.swing.JLabel();
+        showBox = new javax.swing.JCheckBox();
         title = new javax.swing.JLabel();
         title2 = new javax.swing.JLabel();
+        usrFrame = new javax.swing.JLabel();
+        pwdFrame = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        forgotUsrButton = new javax.swing.JButton();
-        button = new javax.swing.JButton();
-        forgotPwdButton = new javax.swing.JButton();
-        showBox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -36,6 +35,35 @@ public class LogInView extends javax.swing.JFrame {
         frame.setBackground(new java.awt.Color(255, 255, 255));
         frame.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         frame.setLayout(null);
+
+        button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logIn_noClick.png"))); // NOI18N
+        button.setBorder(null);
+        frame.add(button);
+        button.setBounds(810, 450, 123, 55);
+
+        forgotUsrButton.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        forgotUsrButton.setForeground(new java.awt.Color(66, 133, 244));
+        forgotUsrButton.setText("Forgot email?");
+        forgotUsrButton.setBorder(null);
+        forgotUsrButton.setBorderPainted(false);
+        forgotUsrButton.setContentAreaFilled(false);
+        forgotUsrButton.setFocusPainted(false);
+        forgotUsrButton.setFocusable(false);
+        forgotUsrButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        frame.add(forgotUsrButton);
+        forgotUsrButton.setBounds(370, 250, 130, 24);
+
+        forgotPwdButton.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        forgotPwdButton.setForeground(new java.awt.Color(66, 133, 244));
+        forgotPwdButton.setText("Forget Password?");
+        forgotPwdButton.setBorder(null);
+        forgotPwdButton.setBorderPainted(false);
+        forgotPwdButton.setContentAreaFilled(false);
+        forgotPwdButton.setFocusPainted(false);
+        forgotPwdButton.setFocusable(false);
+        forgotPwdButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        frame.add(forgotPwdButton);
+        forgotPwdButton.setBounds(370, 470, 170, 24);
 
         usrField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         usrField.setForeground(new java.awt.Color(204, 204, 204));
@@ -50,13 +78,13 @@ public class LogInView extends javax.swing.JFrame {
         frame.add(pwdField);
         pwdField.setBounds(390, 300, 530, 60);
 
-        usrFrame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
-        frame.add(usrFrame);
-        usrFrame.setBounds(370, 160, 562, 85);
-
-        pwdFrame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
-        frame.add(pwdFrame);
-        pwdFrame.setBounds(370, 290, 562, 85);
+        showBox.setBackground(new java.awt.Color(255, 255, 255));
+        showBox.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        showBox.setForeground(new java.awt.Color(102, 102, 102));
+        showBox.setText("Show Passoword");
+        showBox.setBorder(null);
+        frame.add(showBox);
+        showBox.setBounds(370, 400, 159, 25);
 
         title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
         frame.add(title);
@@ -67,37 +95,16 @@ public class LogInView extends javax.swing.JFrame {
         title2.setText("Sign in");
         frame.add(title2);
         title2.setBounds(560, 50, 270, 78);
+
+        usrFrame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
+        frame.add(usrFrame);
+        usrFrame.setBounds(370, 160, 562, 85);
+
+        pwdFrame.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
+        frame.add(pwdFrame);
+        pwdFrame.setBounds(370, 290, 562, 85);
         frame.add(jLabel1);
         jLabel1.setBounds(640, 510, 0, 0);
-
-        forgotUsrButton.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        forgotUsrButton.setForeground(new java.awt.Color(66, 133, 244));
-        forgotUsrButton.setText("Forgot email?");
-        forgotUsrButton.setBorder(null);
-        forgotUsrButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        frame.add(forgotUsrButton);
-        forgotUsrButton.setBounds(370, 250, 130, 25);
-
-        button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logIn_noClick.png"))); // NOI18N
-        button.setBorder(null);
-        frame.add(button);
-        button.setBounds(810, 450, 123, 55);
-
-        forgotPwdButton.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        forgotPwdButton.setForeground(new java.awt.Color(66, 133, 244));
-        forgotPwdButton.setText("Forget Password?");
-        forgotPwdButton.setBorder(null);
-        forgotPwdButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        frame.add(forgotPwdButton);
-        forgotPwdButton.setBounds(370, 470, 170, 25);
-
-        showBox.setBackground(new java.awt.Color(255, 255, 255));
-        showBox.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        showBox.setForeground(new java.awt.Color(102, 102, 102));
-        showBox.setText("Show Passoword");
-        showBox.setBorder(null);
-        frame.add(showBox);
-        showBox.setBounds(370, 400, 159, 25);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,7 +123,6 @@ public class LogInView extends javax.swing.JFrame {
     public Account getData() {
         String accName = usrField.getText();
         String pwd = pwdField.getText();
-        if (accName.equals("") || pwd.equals("")) return null;
         return new Account(accName, pwd);
     }
     

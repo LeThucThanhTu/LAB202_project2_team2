@@ -17,22 +17,22 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        pdNameField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        deliveryIDField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        cusAddrField = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         updateButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
+        searchButton = new javax.swing.JButton();
+        pdNameField = new javax.swing.JTextField();
+        deliveryIDField = new javax.swing.JTextField();
+        cusAddrField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        searchButton = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -41,6 +41,39 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
+        updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        updateButton.setForeground(new java.awt.Color(153, 153, 153));
+        updateButton.setText("Update");
+        updateButton.setBorder(null);
+        updateButton.setBorderPainted(false);
+        updateButton.setContentAreaFilled(false);
+        updateButton.setFocusPainted(false);
+        updateButton.setFocusable(false);
+        jPanel1.add(updateButton);
+        updateButton.setBounds(610, 610, 250, 50);
+
+        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        backButton.setForeground(new java.awt.Color(153, 153, 153));
+        backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
+        jPanel1.add(backButton);
+        backButton.setBounds(320, 610, 250, 50);
+
+        searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(153, 153, 153));
+        searchButton.setText("Search");
+        searchButton.setBorder(null);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setFocusPainted(false);
+        searchButton.setFocusable(false);
+        jPanel1.add(searchButton);
+        searchButton.setBounds(610, 270, 250, 50);
+
         pdNameField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         pdNameField.setForeground(new java.awt.Color(153, 153, 153));
         pdNameField.setText("Name");
@@ -48,36 +81,12 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
         jPanel1.add(pdNameField);
         pdNameField.setBounds(290, 390, 240, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(20, 20, 220, 250);
-
-        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel2.setText("Update Delivery");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(540, 90, 430, 70);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(280, 380, 270, 60);
-
         deliveryIDField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         deliveryIDField.setForeground(new java.awt.Color(204, 204, 204));
         deliveryIDField.setText("Delivery ID");
         deliveryIDField.setBorder(null);
         jPanel1.add(deliveryIDField);
         deliveryIDField.setBounds(450, 180, 530, 70);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(430, 160, 570, 110);
-
-        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel6.setText("Product Name");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(110, 380, 170, 60);
 
         cusAddrField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         cusAddrField.setForeground(new java.awt.Color(153, 153, 153));
@@ -91,28 +100,40 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
         jPanel1.add(cusAddrField);
         cusAddrField.setBounds(840, 390, 250, 40);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(20, 20, 220, 250);
+
+        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel2.setText("Update Delivery");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(540, 90, 430, 70);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(430, 160, 570, 110);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(280, 380, 270, 60);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(-340, -290, 1010, 770);
+
+        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel6.setText("Product Name");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(110, 380, 170, 60);
+
         jLabel9.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(153, 153, 153));
         jLabel9.setText("Customer Address");
         jLabel9.setToolTipText("");
         jPanel1.add(jLabel9);
         jLabel9.setBounds(620, 390, 210, 40);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(-340, -290, 1010, 770);
-
-        updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        updateButton.setForeground(new java.awt.Color(153, 153, 153));
-        updateButton.setText("Update");
-        jPanel1.add(updateButton);
-        updateButton.setBounds(610, 610, 250, 50);
-
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
-        backButton.setText("Back");
-        jPanel1.add(backButton);
-        backButton.setBounds(320, 610, 250, 50);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel10);
@@ -125,12 +146,6 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel14);
         jLabel14.setBounds(600, 610, 270, 60);
-
-        searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        searchButton.setForeground(new java.awt.Color(153, 153, 153));
-        searchButton.setText("Search");
-        jPanel1.add(searchButton);
-        searchButton.setBounds(610, 270, 250, 50);
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel15);
@@ -178,6 +193,13 @@ public class UpdateDeliveryView extends javax.swing.JFrame {
     
     public String getData() {
         return deliveryIDField.getText();
+    }
+    
+    public Delivery getNewData() {
+        String deliveryID = deliveryIDField.getText();
+        String pdName = pdNameField.getText();
+        String cusAddr = cusAddrField.getText();
+        return new Delivery(deliveryID, pdName, cusAddr);
     }
     
     public void clearTextField() {

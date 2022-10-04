@@ -19,26 +19,26 @@ public class RemoveDealerView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         nameField = new javax.swing.JTextField();
         phoneField = new javax.swing.JTextField();
+        idField = new javax.swing.JTextField();
+        isContField = new javax.swing.JTextField();
+        addressField = new javax.swing.JTextField();
+        searchButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
+        deleteButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        idField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        isContField = new javax.swing.JTextField();
-        addressField = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        searchButton = new javax.swing.JButton();
-        backButton = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        deleteButton = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -65,36 +65,12 @@ public class RemoveDealerView extends javax.swing.JFrame {
         jPanel1.add(phoneField);
         phoneField.setBounds(290, 490, 240, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(20, 20, 220, 250);
-
-        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel2.setText("Remove Dealer");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(530, 90, 470, 70);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(280, 380, 270, 60);
-
         idField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         idField.setForeground(new java.awt.Color(204, 204, 204));
         idField.setText("ID");
         idField.setBorder(null);
         jPanel1.add(idField);
         idField.setBounds(450, 180, 530, 70);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(430, 160, 570, 110);
-
-        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel6.setText("Name");
-        jPanel1.add(jLabel6);
-        jLabel6.setBounds(180, 380, 160, 60);
 
         isContField.setEditable(false);
         isContField.setBackground(new java.awt.Color(255, 255, 255));
@@ -124,6 +100,63 @@ public class RemoveDealerView extends javax.swing.JFrame {
         jPanel1.add(addressField);
         addressField.setBounds(780, 390, 240, 40);
 
+        searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(153, 153, 153));
+        searchButton.setText("Search");
+        searchButton.setBorder(null);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setFocusPainted(false);
+        searchButton.setFocusable(false);
+        jPanel1.add(searchButton);
+        searchButton.setBounds(590, 270, 250, 50);
+
+        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        backButton.setForeground(new java.awt.Color(153, 153, 153));
+        backButton.setText("Back");
+        backButton.setBorder(null);
+        backButton.setBorderPainted(false);
+        backButton.setContentAreaFilled(false);
+        backButton.setFocusPainted(false);
+        backButton.setFocusable(false);
+        jPanel1.add(backButton);
+        backButton.setBounds(320, 610, 250, 50);
+
+        deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        deleteButton.setForeground(new java.awt.Color(153, 153, 153));
+        deleteButton.setText("Remove");
+        deleteButton.setBorder(null);
+        deleteButton.setBorderPainted(false);
+        deleteButton.setContentAreaFilled(false);
+        deleteButton.setFocusPainted(false);
+        deleteButton.setFocusable(false);
+        jPanel1.add(deleteButton);
+        deleteButton.setBounds(610, 610, 250, 50);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(20, 20, 220, 250);
+
+        jLabel2.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel2.setText("Remove Dealer");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(530, 90, 470, 70);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(280, 380, 270, 60);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(430, 160, 570, 110);
+
+        jLabel6.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel6.setText("Name");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(180, 380, 160, 60);
+
         jLabel7.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(153, 153, 153));
         jLabel7.setText("Phone");
@@ -144,18 +177,6 @@ public class RemoveDealerView extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel1.add(jLabel5);
         jLabel5.setBounds(-340, -290, 1010, 770);
-
-        searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        searchButton.setForeground(new java.awt.Color(153, 153, 153));
-        searchButton.setText("Search");
-        jPanel1.add(searchButton);
-        searchButton.setBounds(590, 270, 250, 50);
-
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setForeground(new java.awt.Color(153, 153, 153));
-        backButton.setText("Back");
-        jPanel1.add(backButton);
-        backButton.setBounds(320, 610, 250, 50);
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame2.png"))); // NOI18N
         jPanel1.add(jLabel10);
@@ -178,12 +199,6 @@ public class RemoveDealerView extends javax.swing.JFrame {
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel14);
         jLabel14.setBounds(580, 270, 270, 60);
-
-        deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        deleteButton.setForeground(new java.awt.Color(153, 153, 153));
-        deleteButton.setText("Remove");
-        jPanel1.add(deleteButton);
-        deleteButton.setBounds(610, 610, 250, 50);
 
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel1.add(jLabel15);

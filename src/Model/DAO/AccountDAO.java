@@ -62,6 +62,7 @@ public class AccountDAO implements iDAO<Account> {
     @Override
     public boolean isExist(Account object) {
         // case1
+        if (object == null) return false;
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();

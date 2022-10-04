@@ -59,13 +59,12 @@ public class DeliveryDAO implements iDAO<Delivery> {
 
     @Override
     public boolean isExist(Delivery object) {
-        if (!deliList.isEmpty()) {
-            Iterator<Delivery> itr = deliList.iterator();
-            while (itr.hasNext()) {
-                Delivery next = itr.next();
-                if (object.toString().equals(next.toString()))
-                    return true;
-            }
+        if (object == null) return false;
+        Iterator<Delivery> itr = deliList.iterator();
+        while (itr.hasNext()) {
+            Delivery next = itr.next();
+            if (object.toString().equals(next.toString()))
+                return true;
         }
         return false;
     }
