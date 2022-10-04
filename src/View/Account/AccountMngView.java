@@ -1,6 +1,7 @@
 package View.Account;
 
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class AccountMngView extends javax.swing.JFrame {
 
@@ -25,8 +26,6 @@ public class AccountMngView extends javax.swing.JFrame {
         addButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         updateButton = new javax.swing.JButton();
-        backButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         saveButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -85,15 +84,6 @@ public class AccountMngView extends javax.swing.JFrame {
         updateButton.setText("Update Account");
         frame.add(updateButton);
         updateButton.setBounds(459, 365, 250, 50);
-
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setText("Back");
-        frame.add(backButton);
-        backButton.setBounds(670, 605, 250, 50);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
-        frame.add(jLabel6);
-        jLabel6.setBounds(660, 600, 260, 70);
 
         saveButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         saveButton.setText("Save");
@@ -154,11 +144,12 @@ public class AccountMngView extends javax.swing.JFrame {
         printAllButton.addActionListener(listener);
     }
     
-    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
-    private javax.swing.JButton backButton;
     private javax.swing.JButton deleteButton;
     private javax.swing.JPanel frame;
     private javax.swing.JLabel jLabel1;
@@ -166,7 +157,6 @@ public class AccountMngView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

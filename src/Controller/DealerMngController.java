@@ -2,6 +2,7 @@ package Controller;
 
 import Lib.MyTool;
 import Model.DAO.DealerDAO;
+import Model.Entity.Config;
 import Model.Entity.Dealer;
 import View.Dealer.*;
 import java.awt.event.ActionEvent;
@@ -16,6 +17,8 @@ public class DealerMngController {
     private SearchDealerView searchView;
     private DealerListView listView;
     private DealerDAO dealerDAO;
+    private String fileName = new Config().getDealerFile();
+    
     public DealerMngController(DealerMngView view) {
         this.dealerMngView = view;
         dealerDAO = DealerDAO.getInstance();
@@ -215,29 +218,48 @@ public class DealerMngController {
         dealerMngView.addPrintAllButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                showListAllDealerView();
-                
+                ArrayList<Dealer> list = dealerDAO.getList();
+                showListDealerView(list);
             }
         });
         
         dealerMngView.addPrintContButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                showListContDealerView();
+                ArrayList<Dealer> list = dealerDAO.getList();
+                ArrayList<Dealer> result = new ArrayList();
+                for (int i = 0; i <list.size(); i++) {
+                    if (list.get(i).getContinuing()) result.add(list.get(i));
+                }
+                showListDealerView(result);
+                listView.addBackButtonListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent ae) {
+                        listView.dispose();
+                    }
+                });
             }
         });
         
         dealerMngView.addPrintUnContButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                showListUnContDealerView();
+                ArrayList<Dealer> list = dealerDAO.getList();
+                ArrayList<Dealer> result = new ArrayList();
+                for (int i = 0; i <list.size(); i++) {
+                    if (!list.get(i).getContinuing()) result.add(list.get(i));
+                }
+                showListDealerView(result);
             }
         });
         
         dealerMngView.addSaveButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                System.out.println("Save");
+                ArrayList<Dealer> list = dealerDAO.getList();
+                if (MyTool.writeFile(fileName, list)){
+                    dealerMngView.showMessage("Save to file successfully!");
+                }else dealerMngView.showMessage("Save to file Failed!");
             }
         });  
     }
@@ -254,42 +276,25 @@ public class DealerMngController {
     private void showAddDealerView() {
         addView = new AddDealerView();
         addView.setVisible(true);
-        
     }
     
     private void showRemoveDealerView() {
         removeView = new RemoveDealerView();
         removeView.setVisible(true);
-        
     }
     
     private void showUpdateDealerView() {
         updateView = new UpdateDealerView();
         updateView.setVisible(true);
-        
     }
     
     private void showSearchDealerView() {
         searchView = new SearchDealerView();
         searchView.setVisible(true);
-        
     }
     
-    private void showListAllDealerView() {
-        listView = new DealerListView();
+    private void showListDealerView(ArrayList<Dealer> list) {
+        listView = new DealerListView(list);
         listView.setVisible(true);
-        
-    }
-    
-    private void showListContDealerView() {
-        listView = new DealerListView();
-        listView.setVisible(true);
-        
-    }
-    
-    private void showListUnContDealerView() {
-        listView = new DealerListView();
-        listView.setVisible(true);
-        
     }
 }

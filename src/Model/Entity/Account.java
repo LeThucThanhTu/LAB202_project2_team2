@@ -31,7 +31,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account [accName=" + getAccName() + ", pwd=" + getPwd() + ", role=" + getRole() + "]";
+        return (accName + SEPARATOR + pwd + SEPARATOR + role);
     }
 
     public String getAccName() {

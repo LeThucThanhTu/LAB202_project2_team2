@@ -5,7 +5,7 @@
  */
 package Model.TableModel;
 
-import Model.Entity.Dealer;
+import Model.Entity.Account;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
@@ -13,15 +13,15 @@ import javax.swing.table.AbstractTableModel;
  *
  * @author this pc
  */
-public class DealerTableModel extends AbstractTableModel {
-    private String[] colNames = {"ID", "Name", "Address", "Phone", "Continuing"};
-    private ArrayList<Dealer> list;
+public class AccountTableModel extends AbstractTableModel{
+    private String[] colNames = {"Username", "Password", "Role"};
+    private ArrayList<Account> list;
     
-    public DealerTableModel() {
+    public AccountTableModel() {
         list = new ArrayList<>();
     }
     
-    public void setData(ArrayList<Dealer> list) {
+    public void setData(ArrayList<Account> list) {
         this.list = list;
         fireTableDataChanged();
     }
@@ -30,6 +30,8 @@ public class DealerTableModel extends AbstractTableModel {
     public String getColumnName(int i) {
         return colNames[i];
     }
+
+    
     
     
      
@@ -45,20 +47,15 @@ public class DealerTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int row, int col) {
-        Dealer d = list.get(row);
+        Account a = list.get(row);
         switch (col) {
             case 0:
-                return d.getID();
+                return a.getAccName();
             case 1:
-                return d.getName();
+                return a.getPwd();
             case 2:
-                return d.getAddr();
-            case 3:
-                return d.getPhone();
-            case 4:
-                return d.getContinuing() + "";
+                return a.getRole();
         }
         return null;
     }
-    
 }

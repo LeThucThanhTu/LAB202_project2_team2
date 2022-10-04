@@ -8,9 +8,11 @@ package Controller;
 import Lib.MyTool;
 import Model.DAO.AccountDAO;
 import Model.Entity.Account;
+import Model.Entity.Config;
 import View.Account.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 /**
  *
@@ -24,6 +26,7 @@ public class AccountController {
     private SearchAccountView searchView;
     private UpdateAccountView updateView;
     private AccountListView listView;
+    private String fileName = new Config().getAccountFile();
     
     public AccountController(AccountMngView view) {
         this.accMngView = view;
@@ -153,10 +156,10 @@ public class AccountController {
                     }
                 });
                 
-                removeView.addBackButtonListener(new ActionListener() {
+                updateView.addBackButtonListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent ae) {
-                        removeView.dispose();
+                        updateView.dispose();
                     }
                 });
             }
@@ -194,15 +197,24 @@ public class AccountController {
         accMngView.addPrintAllButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                showListAllAccountView();
-                
+                ArrayList<Account> list = accDAO.getList();
+                showListAllAccountView(list);
+                listView.addBackButtonListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent ae) {
+                        listView.dispose();
+                    }
+                });
             }
         });
         
         accMngView.addSaveButtonListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
-                System.out.println("Save");
+                ArrayList<Account> list = accDAO.getList();
+                if (MyTool.writeFile(fileName, list)){
+                    accMngView.showMessage("Save to file successfully!");
+                }else accMngView.showMessage("Save to file Failed!");
             }
         });
     }
@@ -240,8 +252,8 @@ public class AccountController {
         
     }
     
-    private void showListAllAccountView() {
-        listView = new AccountListView();
+    private void showListAllAccountView(ArrayList<Account> list) {
+        listView = new AccountListView(list);
         listView.setVisible(true);
     }
 }

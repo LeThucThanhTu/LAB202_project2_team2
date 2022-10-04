@@ -71,14 +71,11 @@ public class Dealer implements Comparable<Dealer>{
 
     @Override
     public String toString() {
-        return "Dealer [ID=" + ID + ", name=" + name + ", addr=" + addr + ", phone=" + phone + ", continuing="
-                + continuing
-                + "]";
+        return (ID + SEPARATOR + name + SEPARATOR + addr + SEPARATOR + phone + SEPARATOR + continuing);
     }
 
     @Override
     public int compareTo(Dealer t) {
         return this.getID().compareTo(t.getID());
     }
-
 }

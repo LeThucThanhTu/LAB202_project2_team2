@@ -1,6 +1,7 @@
 package View.Dealer;
 
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class DealerMngView extends javax.swing.JFrame {
 
@@ -171,6 +172,10 @@ public class DealerMngView extends javax.swing.JFrame {
     
     public void addSaveButtonListener(ActionListener listener) {
         saveButton.addActionListener(listener);
+    }
+    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
     }
     
     

@@ -99,7 +99,7 @@ public class SearchAccountView extends javax.swing.JFrame {
 
         inputField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         inputField.setForeground(new java.awt.Color(204, 204, 204));
-        inputField.setText("UserName");
+        inputField.setText("Username");
         inputField.setBorder(null);
         jPanel1.add(inputField);
         inputField.setBounds(450, 180, 530, 70);

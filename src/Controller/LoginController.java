@@ -17,7 +17,7 @@ public class LoginController {
     public LoginController(LogInView view) {
         this.loginView = view;
         accDAO = AccountDAO.getInstance();
-        view.addSignInListener(new ActionListener() {
+        loginView.addSignInListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 System.out.println("Sign In");

@@ -12,11 +12,15 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.text.ParseException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * 
@@ -122,16 +126,21 @@ public class MyTool {
         return list;
     }
 
-    public static void writeFile(String filename, List list) {
+    public static boolean writeFile(String filename, List list) {
+        File f = new File(filename);
+        FileWriter fw;
         try {
-            FileOutputStream fileOut = new FileOutputStream(filename);
-            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-            objectOut.writeObject(list);
-            objectOut.close();
-            System.out.println("The Object  was successfully written to a file");
-
+            fw = new FileWriter(f);
+            PrintWriter pw = new PrintWriter(fw);
+            for (int i = 0; i < list.size(); i++) {
+                pw.println(list.get(i).toString());
+            }
+            pw.close();
+            fw.close();
         } catch (IOException ex) {
-            ex.printStackTrace();
+            Logger.getLogger(MyTool.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
+        return true;
     }
 }

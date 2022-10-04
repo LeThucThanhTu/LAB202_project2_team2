@@ -1,0 +1,6 @@
+DL001,Thanh Tu,nha Minh Huan
+DL002,Minh Huan,nha Thanh Tu
+DL003,Tuyen Tap Truyen 18+,nha Thanh Tu
+DL004,Ghe tinh yeu,nha Thanh Tu
+DL005,Qua trung tinh yeu,nha Thanh Tu
+DL006,Tron bo cong tay so 8 va day nit,nha Thanh Tu

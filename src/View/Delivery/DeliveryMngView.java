@@ -1,6 +1,7 @@
 package View.Delivery;
 
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class DeliveryMngView extends javax.swing.JFrame {
 
@@ -170,6 +171,10 @@ public class DeliveryMngView extends javax.swing.JFrame {
     
     public void addSaveButtonListener(ActionListener listener) {
         saveButton.addActionListener(listener);
+    }
+    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

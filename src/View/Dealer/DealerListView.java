@@ -1,11 +1,20 @@
 package View.Dealer;
 
-public class DealerListView extends javax.swing.JFrame {
+import Model.Entity.Dealer;
+import Model.TableModel.DealerTableModel;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-    public DealerListView() {
+public class DealerListView extends javax.swing.JFrame {
+    private DealerTableModel dealerTableModel;
+    public DealerListView(ArrayList<Dealer> list) {
         super("Dealer List");
         initComponents();
+
         setLocationRelativeTo(null);
+        dealerTableModel = new DealerTableModel();
+        dealerTableModel.setData(list);
+        jTable1.setModel(dealerTableModel);
     }
     
     @SuppressWarnings("unchecked")
@@ -19,6 +28,8 @@ public class DealerListView extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -50,6 +61,22 @@ public class DealerListView extends javax.swing.JFrame {
         jPanel2.add(jLabel4);
         jLabel4.setBounds(420, 620, 260, 80);
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(220, 240, 880, 150);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,6 +91,10 @@ public class DealerListView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
     private javax.swing.JLabel jLabel1;
@@ -72,5 +103,7 @@ public class DealerListView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

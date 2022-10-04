@@ -1,6 +1,10 @@
 
 package View.Delivery;
 
+import Model.Entity.Delivery;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+
 public class AddDeliveryView extends javax.swing.JFrame {
 
     public AddDeliveryView() {
@@ -16,11 +20,11 @@ public class AddDeliveryView extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        pwdField = new javax.swing.JTextField();
-        usrField = new javax.swing.JTextField();
+        productNameField = new javax.swing.JTextField();
+        deliveryIDField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         addButton = new javax.swing.JButton();
-        roleField = new javax.swing.JTextField();
+        usrAddrField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         backButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -44,19 +48,24 @@ public class AddDeliveryView extends javax.swing.JFrame {
         jPanel2.add(jLabel3);
         jLabel3.setBounds(130, 50, 530, 50);
 
-        pwdField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        pwdField.setForeground(new java.awt.Color(204, 204, 204));
-        pwdField.setText("Password");
-        pwdField.setBorder(null);
-        jPanel2.add(pwdField);
-        pwdField.setBounds(80, 290, 530, 70);
+        productNameField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        productNameField.setForeground(new java.awt.Color(204, 204, 204));
+        productNameField.setText("Product Name");
+        productNameField.setBorder(null);
+        productNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productNameFieldActionPerformed(evt);
+            }
+        });
+        jPanel2.add(productNameField);
+        productNameField.setBounds(80, 290, 530, 70);
 
-        usrField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        usrField.setForeground(new java.awt.Color(204, 204, 204));
-        usrField.setText("user");
-        usrField.setBorder(null);
-        jPanel2.add(usrField);
-        usrField.setBounds(90, 170, 520, 60);
+        deliveryIDField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        deliveryIDField.setForeground(new java.awt.Color(204, 204, 204));
+        deliveryIDField.setText("Delivery ID");
+        deliveryIDField.setBorder(null);
+        jPanel2.add(deliveryIDField);
+        deliveryIDField.setBounds(90, 170, 520, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg.png"))); // NOI18N
         jPanel2.add(jLabel1);
@@ -68,17 +77,17 @@ public class AddDeliveryView extends javax.swing.JFrame {
         jPanel2.add(addButton);
         addButton.setBounds(370, 630, 250, 50);
 
-        roleField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        roleField.setForeground(new java.awt.Color(204, 204, 204));
-        roleField.setText("Role");
-        roleField.setBorder(null);
-        roleField.addActionListener(new java.awt.event.ActionListener() {
+        usrAddrField.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        usrAddrField.setForeground(new java.awt.Color(204, 204, 204));
+        usrAddrField.setText("Customer Address");
+        usrAddrField.setBorder(null);
+        usrAddrField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                roleFieldActionPerformed(evt);
+                usrAddrFieldActionPerformed(evt);
             }
         });
-        jPanel2.add(roleField);
-        roleField.setBounds(80, 410, 530, 70);
+        jPanel2.add(usrAddrField);
+        usrAddrField.setBounds(80, 410, 530, 70);
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/textFrame.png"))); // NOI18N
         jPanel2.add(jLabel5);
@@ -116,13 +125,37 @@ public class AddDeliveryView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void roleFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleFieldActionPerformed
+    private void usrAddrFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usrAddrFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_roleFieldActionPerformed
+    }//GEN-LAST:event_usrAddrFieldActionPerformed
 
+    private void productNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productNameFieldActionPerformed
+
+    public void addAddButtonListener(ActionListener listener) {
+        addButton.addActionListener(listener);
+    }
+    
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
+    public Delivery getData() {
+        String deliveryID = deliveryIDField.getText();
+        String productName = productNameField.getText();
+        String usrAddr = usrAddrField.getText();
+        return new Delivery(deliveryID, productName, usrAddr);
+    }
+    
+    public void showMessage(String message) {
+        JOptionPane.showMessageDialog(null, message);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addButton;
     private javax.swing.JButton backButton;
+    private javax.swing.JTextField deliveryIDField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -132,8 +165,7 @@ public class AddDeliveryView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField pwdField;
-    private javax.swing.JTextField roleField;
-    private javax.swing.JTextField usrField;
+    private javax.swing.JTextField productNameField;
+    private javax.swing.JTextField usrAddrField;
     // End of variables declaration//GEN-END:variables
 }

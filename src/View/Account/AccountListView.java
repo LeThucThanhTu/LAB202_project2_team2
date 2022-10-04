@@ -1,11 +1,19 @@
 package View.Account;
 
-public class AccountListView extends javax.swing.JFrame {
+import Model.Entity.Account;
+import Model.TableModel.AccountTableModel;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
-    public AccountListView() {
+public class AccountListView extends javax.swing.JFrame {
+    private AccountTableModel accTableModel;
+    public AccountListView(ArrayList<Account> list) {
         super("Account List");
         initComponents();
         setLocationRelativeTo(null);
+        accTableModel = new AccountTableModel();
+        accTableModel.setData(list);
+        jTable1.setModel(accTableModel);
     }
     
     @SuppressWarnings("unchecked")
@@ -17,10 +25,10 @@ public class AccountListView extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -44,54 +52,6 @@ public class AccountListView extends javax.swing.JFrame {
         jPanel2.add(jLabel9);
         jLabel9.setBounds(120, 670, 270, 0);
 
-        table.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
-        table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Name", "Phone", "Address", "Continuing"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(table);
-        if (table.getColumnModel().getColumnCount() > 0) {
-            table.getColumnModel().getColumn(0).setHeaderValue("ID");
-            table.getColumnModel().getColumn(1).setHeaderValue("Name");
-            table.getColumnModel().getColumn(2).setHeaderValue("Phone");
-            table.getColumnModel().getColumn(3).setHeaderValue("Address");
-            table.getColumnModel().getColumn(4).setHeaderValue("Continuing");
-        }
-
-        jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(10, 120, 1070, 450);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg2.png"))); // NOI18N
         jPanel2.add(jLabel1);
         jLabel1.setBounds(-490, -90, 990, 580);
@@ -99,6 +59,11 @@ public class AccountListView extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         jPanel2.add(jLabel2);
         jLabel2.setBounds(430, 610, 264, 70);
+
+        jScrollPane2.setViewportView(jTable1);
+
+        jPanel2.add(jScrollPane2);
+        jScrollPane2.setBounds(230, 230, 850, 140);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -114,6 +79,10 @@ public class AccountListView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    public void addBackButtonListener(ActionListener listener) {
+        backButton.addActionListener(listener);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
     private javax.swing.JLabel jLabel1;
@@ -122,7 +91,7 @@ public class AccountListView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable table;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
