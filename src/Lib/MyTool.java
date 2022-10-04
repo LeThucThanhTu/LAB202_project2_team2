@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Lib;
 
 import java.util.Scanner;
@@ -18,10 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
 
-/**
- * 
- * @author phatt
- */
 public class MyTool {
     private static final Scanner sc = new Scanner(System.in);
 
@@ -68,7 +60,6 @@ public class MyTool {
         do {
             System.out.println(message + ": ");
             input = sc.nextLine().trim();
-
         } while (input.isEmpty());
 
         return input;
@@ -81,7 +72,6 @@ public class MyTool {
             System.out.println(message + ":");
             input = sc.nextLine().trim();
             valid = validStr(input, pattern);
-
         } while (!valid);
 
         return input;
@@ -102,7 +92,7 @@ public class MyTool {
     }
 
     public static List<String> readLinesFromFile(String Filename) {
-        List<String> list = new ArrayList();
+        List<String> list = new ArrayList<String>();
         try {
             File f = new File(Filename);
             if (!f.exists())
@@ -111,9 +101,9 @@ public class MyTool {
             FileReader fr = new FileReader(f);
             BufferedReader bf = new BufferedReader(fr);
             String details, obj;
-            while ((details = bf.readLine()) != null) {
+            while ((details = bf.readLine()) != null)
                 list.add(details);
-            }
+
             bf.close();
             fr.close();
         } catch (IOException e) {

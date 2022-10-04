@@ -21,22 +21,21 @@ public class AccountDAO implements iDAO<Account> {
 
     // create a singleton class
     public static AccountDAO getInstance() {
-        if (instance == null) {
+        if (instance == null)
             instance = new AccountDAO();
-        }
+
         return instance;
     }
 
     @Override
     public Account search(String input) {
-        // TODO Auto-generated method stub
         // search by id
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();
-            if (input.equals(next.getAccName())) {
+            if (input.equals(next.getAccName()))
                 return next;
-            }
+
         }
         return null;
     }
@@ -53,9 +52,9 @@ public class AccountDAO implements iDAO<Account> {
     public ArrayList<Account> readFromFile() {
         ArrayList<Account> ls = new ArrayList<>();
         List<String> strList = MyTool.readLinesFromFile(fileName);
-        for (int i = 0; i < strList.size(); i++) {
+        for (int i = 0; i < strList.size(); i++)
             ls.add(new Account(strList.get(i)));
-        }
+
         return ls;
     }
 
@@ -65,9 +64,9 @@ public class AccountDAO implements iDAO<Account> {
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();
-            if (object.toString().equals(next.getAccName().toString())) {
+            if (object.toString().equals(next.getAccName().toString()))
                 return true;
-            }
+
         }
         return false;
         // case 2 using search method
@@ -83,7 +82,8 @@ public class AccountDAO implements iDAO<Account> {
 
     @Override
     public boolean add(Account object) {
-        if (isExist(object)) return false;
+        if (isExist(object))
+            return false;
         accList.add(object);
         return true;
         // Tools | Templates.
@@ -91,20 +91,21 @@ public class AccountDAO implements iDAO<Account> {
 
     @Override
     public boolean delete(Account object) {
-        if (!isExist(object)) return false;
+        if (!isExist(object))
+            return false;
         // case1 type hardcode
         Iterator<Account> itr = accList.iterator();
         while (itr.hasNext()) {
             Account next = itr.next();
             if (object.toString().equals(next.getAccName().toString())) {
                 accList.remove(next);
-                System.out.println("-----DETELED-----");
+                System.out.println("-----DELETED-----");
                 return true;
             }
         }
         // case 2 using search method
         // if (!accList.isEmpty()&&accList.remove(object)){
-        // System.out.println("-----DETELED-----");
+        // System.out.println("-----DELETED-----");
         // };
         return false;
     }
@@ -117,7 +118,8 @@ public class AccountDAO implements iDAO<Account> {
 
     @Override
     public boolean update(Account object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
+                                                                       // Tools | Templates.
     }
 
 }

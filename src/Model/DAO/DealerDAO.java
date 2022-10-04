@@ -21,23 +21,21 @@ public class DealerDAO implements iDAO<Dealer> {
 
     // create a singleton class
     public static DealerDAO getInstance() {
-        if (instance == null) {
+        if (instance == null)
             instance = new DealerDAO();
-        }
+
         return instance;
     }
 
     @Override
     public Dealer search(String input) {
         if (!dealList.isEmpty()) {
-            // TODO Auto-generated method stub
             // search by id
             Iterator<Dealer> itr = dealList.iterator();
             while (itr.hasNext()) {
                 Dealer next = itr.next();
-                if (input.equals(next.getID())) {
+                if (input.equals(next.getID()))
                     return next;
-                }
             }
         }
         return null;
@@ -55,9 +53,9 @@ public class DealerDAO implements iDAO<Dealer> {
     public ArrayList<Dealer> readFromFile() {
         ArrayList<Dealer> ls = new ArrayList();
         List<String> strList = MyTool.readLinesFromFile(fileName);
-        for (int i = 0; i < strList.size(); i++) {
+        for (int i = 0; i < strList.size(); i++)
             ls.add(new Dealer(strList.get(i)));
-        }
+
         return ls;
     }
 
@@ -68,9 +66,8 @@ public class DealerDAO implements iDAO<Dealer> {
             Iterator<Dealer> itr = dealList.iterator();
             while (itr.hasNext()) {
                 Dealer next = itr.next();
-                if (object.toString().equals(next.toString())) {
+                if (object.toString().equals(next.toString()))
                     return true;
-                }
             }
         }
         return false;

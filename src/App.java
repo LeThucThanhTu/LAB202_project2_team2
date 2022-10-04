@@ -19,9 +19,9 @@ public class App {
     public static void startProgram() {
         Account acc = LogIn.getInstance().getAccount();
 
-        if (acc == null) {
+        if (acc == null)
             showLogInForm();
-        }
+
         // blocking program until user is login
         do {
             acc = LogIn.getInstance().getAccount();
@@ -64,5 +64,4 @@ public class App {
         DeliveryController deliveryCtrl = new DeliveryController(deliveryView);
         deliveryCtrl.showDeliveryMngView();
     }
-
 }

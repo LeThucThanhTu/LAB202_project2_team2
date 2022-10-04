@@ -68,11 +68,11 @@ public class DeliveryDAO implements iDAO<Delivery> {
 
     @Override
     public ArrayList<Delivery> readFromFile() {
-        ArrayList<Delivery> ls = new ArrayList();
+        ArrayList<Delivery> ls = new ArrayList<Delivery>();
         List<String> strList = MyTool.readLinesFromFile(fileName);
-        for (int i = 0; i < strList.size(); i++) {
+        for (int i = 0; i < strList.size(); i++)
             ls.add(new Delivery(strList.get(i)));
-        }
+
         return ls;
     }
 
