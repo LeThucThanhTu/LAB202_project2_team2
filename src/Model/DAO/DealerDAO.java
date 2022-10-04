@@ -7,11 +7,13 @@ import java.util.Iterator;
 import Lib.MyTool;
 import Model.Entity.Config;
 import Model.Entity.Dealer;
+import java.util.List;
 
 public class DealerDAO implements iDAO<Dealer> {
     private static DealerDAO instance;
     private ArrayList<Dealer> dealList;
-    private String fn = new Config().getDealerFile();
+    private Config cF = new Config();
+    private String fileName = cF.getDealerFile();
 
     private DealerDAO() {
         dealList = readFromFile();
@@ -19,21 +21,21 @@ public class DealerDAO implements iDAO<Dealer> {
 
     // create a singleton class
     public static DealerDAO getInstance() {
-        if (instance == null) {
+        if (instance == null)
             instance = new DealerDAO();
-        }
+
         return instance;
     }
 
     @Override
     public Dealer search(String input) {
-        // TODO Auto-generated method stub
-        // search by id
-        Iterator<Dealer> itr = dealList.iterator();
-        while (itr.hasNext()) {
-            Dealer next = itr.next();
-            if (input.equals(next.getID())) {
-                return next;
+        if (!dealList.isEmpty()) {
+            // search by id
+            Iterator<Dealer> itr = dealList.iterator();
+            while (itr.hasNext()) {
+                Dealer next = itr.next();
+                if (input.equals(next.getID()))
+                    return next;
             }
         }
         return null;
@@ -49,19 +51,23 @@ public class DealerDAO implements iDAO<Dealer> {
 
     @Override
     public ArrayList<Dealer> readFromFile() {
-        ArrayList<Dealer> ls = new ArrayList<>();
-        ls.addAll((ArrayList<Dealer>) MyTool.readFile(fn));
+        ArrayList<Dealer> ls = new ArrayList();
+        List<String> strList = MyTool.readLinesFromFile(fileName);
+        for (int i = 0; i < strList.size(); i++)
+            ls.add(new Dealer(strList.get(i)));
+
         return ls;
     }
 
     @Override
     public boolean isExist(Dealer object) {
-        // case1
-        Iterator<Dealer> itr = dealList.iterator();
-        while (itr.hasNext()) {
-            Dealer next = itr.next();
-            if (object.toString().equals(next.toString())) {
-                return true;
+        if (!dealList.isEmpty()) {
+            // case1
+            Iterator<Dealer> itr = dealList.iterator();
+            while (itr.hasNext()) {
+                Dealer next = itr.next();
+                if (object.toString().equals(next.toString()))
+                    return true;
             }
         }
         return false;
@@ -77,32 +83,52 @@ public class DealerDAO implements iDAO<Dealer> {
     }
 
     @Override
-    public void add(Dealer object) {
+    public boolean add(Dealer object) {
+        if (isExist(object))
+            return false;
         dealList.add(object);
         // Tools | Templates.
+        return true;
     }
 
     @Override
-    public void delete(Dealer object) {
+    public boolean delete(Dealer object) {
+        if (!isExist(object))
+            return false;
         // case1 type hardcode
         Iterator<Dealer> itr = dealList.iterator();
         while (itr.hasNext()) {
             Dealer next = itr.next();
             if (object.toString().equals(next.toString())) {
                 dealList.remove(next);
-                System.out.println("-----DETELED-----");
-                return;
+                return true;
             }
         }
         // case 2 using search method
         // if (!dealList.isEmpty()&&dealList.remove(object)){
         // System.out.println("-----DETELED-----");
         // };
+        return false;
     }
 
     @Override
-    public void writeToFile() {
-        MyTool.writeFile(fn, dealList);
+    public boolean writeToFile() {
+        MyTool.writeFile(fileName, dealList);
+        return true;
+    }
+
+    @Override
+    public boolean update(Dealer object) {
+        if (!dealList.isEmpty()) {
+            Iterator<Dealer> itr = dealList.iterator();
+            for (int i = 0; i < dealList.size(); i++) {
+                if (dealList.get(i).getID().equals(object.getID())) {
+                    dealList.set(i, object);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 }

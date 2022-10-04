@@ -1,9 +1,5 @@
 package Model.DAO;
 
-/**
- *
- * @author letu
- */
 import java.util.ArrayList;
 
 public interface iDAO<T> {
@@ -13,11 +9,13 @@ public interface iDAO<T> {
 
     T search(String input);
 
-    void add(T object);
+    boolean add(T object);
 
-    void delete(T object);
+    boolean delete(T object);
 
-    void writeToFile();
+    boolean writeToFile();
+
+    boolean update(T object);
 
     ArrayList<T> readFromFile();
 }

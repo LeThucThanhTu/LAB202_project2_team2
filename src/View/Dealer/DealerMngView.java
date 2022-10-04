@@ -1,9 +1,13 @@
 package View.Dealer;
 
+import java.awt.event.ActionListener;
+
 public class DealerMngView extends javax.swing.JFrame {
 
     public DealerMngView() {
+        super("Dealer Management");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -18,13 +22,11 @@ public class DealerMngView extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         searchButton = new javax.swing.JButton();
         deleteButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        addButton = new javax.swing.JButton();
         printContButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        printUnCintButton = new javax.swing.JButton();
+        printUnContButton = new javax.swing.JButton();
         updateButton = new javax.swing.JButton();
-        backButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         saveButton = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -42,20 +44,25 @@ public class DealerMngView extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(153, 153, 153));
         jLabel1.setText("Dealer's Menu");
         frame.add(jLabel1);
-        jLabel1.setBounds(700, 40, 227, 47);
+        jLabel1.setBounds(700, 40, 300, 47);
 
-        title.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\logo.png")); // NOI18N
+        title.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/logo.png"))); // NOI18N
         frame.add(title);
         title.setBounds(30, 220, 205, 234);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\lethu\\OneDrive\\Desktop\\Code_Java\\LAB202_project2_team2\\src\\View\\icon\\bg.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/bg.png"))); // NOI18N
         frame.add(jLabel2);
         jLabel2.setBounds(90, 0, 355, 730);
 
+        printAllButton.setBackground(new java.awt.Color(255, 255, 255));
         printAllButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         printAllButton.setText("Print All Dealer");
+        printAllButton.setBorderPainted(false);
+        printAllButton.setContentAreaFilled(false);
+        printAllButton.setFocusPainted(false);
+        printAllButton.setFocusable(false);
         frame.add(printAllButton);
-        printAllButton.setBounds(860, 145, 250, 50);
+        printAllButton.setBounds(860, 140, 250, 60);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
         frame.add(jLabel4);
@@ -63,27 +70,43 @@ public class DealerMngView extends javax.swing.JFrame {
 
         searchButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         searchButton.setText("Search a Dealer");
+        searchButton.setBorder(null);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(false);
+        searchButton.setFocusPainted(false);
+        searchButton.setFocusable(false);
         frame.add(searchButton);
         searchButton.setBounds(460, 470, 250, 60);
 
+        deleteButton.setBackground(new java.awt.Color(255, 255, 255));
         deleteButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         deleteButton.setText("Remove a Dealer");
+        deleteButton.setBorder(null);
+        deleteButton.setBorderPainted(false);
+        deleteButton.setContentAreaFilled(false);
+        deleteButton.setFocusPainted(false);
+        deleteButton.setFocusable(false);
         frame.add(deleteButton);
         deleteButton.setBounds(460, 250, 250, 60);
 
-        jButton1.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        jButton1.setText("Add new Dealer");
-        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        frame.add(jButton1);
-        jButton1.setBounds(460, 140, 250, 60);
+        addButton.setBackground(new java.awt.Color(255, 255, 255));
+        addButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        addButton.setText("Add new Dealer");
+        addButton.setBorder(null);
+        addButton.setBorderPainted(false);
+        addButton.setContentAreaFilled(false);
+        addButton.setFocusPainted(false);
+        addButton.setFocusable(false);
+        frame.add(addButton);
+        addButton.setBounds(460, 140, 250, 60);
 
+        printContButton.setBackground(new java.awt.Color(255, 255, 255));
         printContButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         printContButton.setText("Cont Dealer List");
+        printContButton.setBorderPainted(false);
+        printContButton.setContentAreaFilled(false);
+        printContButton.setFocusPainted(false);
+        printContButton.setFocusable(false);
         frame.add(printContButton);
         printContButton.setBounds(860, 260, 250, 50);
 
@@ -91,27 +114,34 @@ public class DealerMngView extends javax.swing.JFrame {
         frame.add(jLabel5);
         jLabel5.setBounds(450, 470, 260, 70);
 
-        printUnCintButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        printUnCintButton.setText("UN-cont Dealer List");
-        frame.add(printUnCintButton);
-        printUnCintButton.setBounds(860, 370, 250, 50);
+        printUnContButton.setBackground(new java.awt.Color(255, 255, 255));
+        printUnContButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
+        printUnContButton.setText("UN-cont Dealer List");
+        printUnContButton.setBorder(null);
+        printUnContButton.setBorderPainted(false);
+        printUnContButton.setContentAreaFilled(false);
+        printUnContButton.setFocusPainted(false);
+        printUnContButton.setFocusable(false);
+        frame.add(printUnContButton);
+        printUnContButton.setBounds(860, 370, 250, 50);
 
         updateButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         updateButton.setText("Update Dealer");
+        updateButton.setBorder(null);
+        updateButton.setBorderPainted(false);
+        updateButton.setContentAreaFilled(false);
+        updateButton.setFocusPainted(false);
+        updateButton.setFocusable(false);
         frame.add(updateButton);
         updateButton.setBounds(459, 365, 250, 50);
 
-        backButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
-        backButton.setText("Back");
-        frame.add(backButton);
-        backButton.setBounds(670, 605, 250, 50);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/icon/button_noClick.png"))); // NOI18N
-        frame.add(jLabel6);
-        jLabel6.setBounds(660, 600, 260, 70);
-
         saveButton.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         saveButton.setText("Save");
+        saveButton.setBorder(null);
+        saveButton.setBorderPainted(false);
+        saveButton.setContentAreaFilled(false);
+        saveButton.setFocusPainted(false);
+        saveButton.setFocusable(false);
         frame.add(saveButton);
         saveButton.setBounds(860, 475, 250, 50);
 
@@ -152,16 +182,44 @@ public class DealerMngView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+    
+    public void addAddButtonListener(ActionListener listener) {
+        addButton.addActionListener(listener);
+    }
+    
+    public void addDeleteButtonListener(ActionListener listener) {
+        deleteButton.addActionListener(listener);
+    }
+    
+    public void addSearchButtonListener(ActionListener listener) {
+        searchButton.addActionListener(listener);
+    }
+    
+    public void addPrintAllButtonListener(ActionListener listener) {
+        printAllButton.addActionListener(listener);
+    }
+    
+    public void addPrintContButtonListener(ActionListener listener) {
+        printContButton.addActionListener(listener);
+    }
+    
+    public void addPrintUnContButtonListener(ActionListener listener) {
+        printUnContButton.addActionListener(listener);
+    }
+    
+    public void addUpdateButtonListener(ActionListener listener) {
+        updateButton.addActionListener(listener);
+    }
+    
+    public void addSaveButtonListener(ActionListener listener) {
+        saveButton.addActionListener(listener);
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backButton;
+    private javax.swing.JButton addButton;
     private javax.swing.JButton deleteButton;
     private javax.swing.JPanel frame;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -169,13 +227,12 @@ public class DealerMngView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JButton printAllButton;
     private javax.swing.JButton printContButton;
-    private javax.swing.JButton printUnCintButton;
+    private javax.swing.JButton printUnContButton;
     private javax.swing.JButton saveButton;
     private javax.swing.JButton searchButton;
     private javax.swing.JLabel title;

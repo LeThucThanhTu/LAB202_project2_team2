@@ -13,26 +13,27 @@ import java.util.List;
  * @author this pc
  */
 public class Config {
-private static final String CONFIG_FILE = "DealerData/config.txt";
+    private static final String CONFIG_FILE = "config.txt";
     private String accountFile;
     private String dealerFile;
     private String deliveryFile;
-    
-    public Config(){
+
+    public Config() {
         readData();
     }
-    
-    private void readData(){
+
+    private void readData() {
         List<String> lines = MyTool.readLinesFromFile(CONFIG_FILE);
-        for(String line:lines){
-            line = line.toUpperCase();
+        for (String line : lines) {
             String[] parts = line.split(":");
-            if(line.indexOf("ACCOUN")>=0)
-                accountFile = "DealerData/" + parts[1].trim();
-            else if(line.indexOf("DEALE")>=0)
-                dealerFile = "DealerData/" + parts[1].trim();
-            else if(line.indexOf("DELIVER")>=0)
-                deliveryFile = "DealerData/" + parts[1].trim();
+            String fPart = parts[0].toUpperCase();
+
+            if (fPart.contains("ACCOUNT"))
+                accountFile = parts[1].trim();
+            else if (fPart.indexOf("DEALER") >= 0)
+                dealerFile = parts[1].trim();
+            else if (fPart.indexOf("DELIVER") >= 0)
+                deliveryFile = parts[1].trim();
         }
     }
 
@@ -47,5 +48,4 @@ private static final String CONFIG_FILE = "DealerData/config.txt";
     public String getDeliveryFile() {
         return deliveryFile;
     }
-
 }

@@ -1,12 +1,27 @@
 package Model.Entity;
 
-public class Dealer {
-    private String ID, name, addr, phone, continuing;
+import Lib.MyTool;
+
+public class Dealer implements Comparable<Dealer>{
+    public static final char SEPARATOR = ',';
+    public static final String ID_FORMAT = "D\\d{3}";
+    public static final String PHONE_FORMAT = "\\d{9}|\\d{11}";
+    private String ID, name, addr, phone;
+    private boolean continuing;
 
     public Dealer() {
     }
+    
+    public Dealer(String line) {
+        String[] parts = line.split("" + this.SEPARATOR);
+        ID = parts[0].trim();
+        name = parts[1].trim();
+        addr = parts[2].trim();
+        phone = parts[3].trim();
+        continuing = MyTool.parseBool(parts[4]);
+    }
 
-    public Dealer(String iD, String name, String addr, String phone, String continuing) {
+    public Dealer(String iD, String name, String addr, String phone, boolean continuing) {
         ID = iD;
         this.name = name;
         this.addr = addr;
@@ -46,11 +61,11 @@ public class Dealer {
         this.phone = phone;
     }
 
-    public String getContinuing() {
+    public boolean getContinuing() {
         return continuing;
     }
 
-    public void setContinuing(String continuing) {
+    public void setContinuing(boolean continuing) {
         this.continuing = continuing;
     }
 
@@ -59,6 +74,11 @@ public class Dealer {
         return "Dealer [ID=" + ID + ", name=" + name + ", addr=" + addr + ", phone=" + phone + ", continuing="
                 + continuing
                 + "]";
+    }
+
+    @Override
+    public int compareTo(Dealer t) {
+        return this.getID().compareTo(t.getID());
     }
 
 }
